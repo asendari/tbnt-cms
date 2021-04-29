@@ -1,0 +1,126 @@
+/**
+ * @name radio
+ * @description Radio mixins scss for ReactJS personal library
+ * @file SCSS Radio mixins
+ *
+ * @version 1.0.0 - 2019-11-28
+ * @author Alexandre Pilloud
+ */
+
+/* --------------------------------------------------------------------------
+ * Ratio
+ */
+
+@mixin ratio-child() {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+@mixin ratio-parent() {
+	position: relative;
+	overflow: hidden;
+
+	&:before {
+		content: '';
+		display: block;
+	}
+
+	& > .ratio-child {
+		@include ratio-child;
+	}
+}
+
+@mixin ratio-2-1() {
+	@include ratio-parent;
+
+	&:before {
+		padding-top: 50%;
+	}
+}
+
+@mixin ratio-16-9() {
+	@include ratio-parent;
+
+	&:before {
+		padding-top: 56.25%;
+	}
+}
+
+@mixin ratio-3-2() {
+	@include ratio-parent;
+
+	&:before {
+		padding-top: 67%;
+	}
+}
+
+@mixin ratio-4-3() {
+	@include ratio-parent;
+
+	&:before {
+		padding-top: 75%;
+	}
+}
+
+@mixin ratio-1-1() {
+	@include ratio-parent;
+
+	&:before {
+		padding-top: 100%;
+	}
+}
+
+@mixin ratio-3-4() {
+	@include ratio-parent;
+
+	&:before {
+		padding-top: 133.333%;
+	}
+}
+
+@mixin ratio-none() {
+	@include ratio-parent;
+
+	&:before {
+		display: none !important;
+	}
+
+	& > .ratio-child {
+		position: relative !important;
+	}
+}
+
+@include all-devices('ratio-parent') {
+	@include ratio-parent;
+}
+
+@include all-devices('ratio-2-1') {
+	@include ratio-2-1;
+}
+
+@include all-devices('ratio-16-9') {
+	@include ratio-16-9;
+}
+
+@include all-devices('ratio-3-2') {
+	@include ratio-3-2;
+}
+
+@include all-devices('ratio-4-3') {
+	@include ratio-4-3;
+}
+
+@include all-devices('ratio-1-1') {
+	@include ratio-1-1;
+}
+
+@include all-devices('ratio-3-4') {
+	@include ratio-3-4;
+}
+
+@include all-devices('ratio-none') {
+	@include ratio-none;
+}

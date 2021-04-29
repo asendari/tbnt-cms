@@ -1,0 +1,19 @@
+@mixin transition-fast($ease: $ease-out-expo, $delay: 0ms) {
+	transition: 200ms $delay all $ease;
+}
+
+@mixin transition($ease: $ease-out-expo, $delay: 0ms) {
+	transition: 400ms $delay all $ease;
+}
+
+@mixin transition-slow($ease: $ease-out-expo, $delay: 0ms) {
+	transition: 600ms $delay all $ease;
+}
+
+@mixin transition-very-slow($ease: $ease-out-expo, $delay: 0ms) {
+	transition: 1000ms $delay all $ease;
+}
+
+@mixin transition-very-very-very-slow($ease: $ease-out-expo, $delay: 0ms) {
+	transition: 4000ms $delay all $ease;
+}

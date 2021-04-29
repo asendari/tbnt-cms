@@ -1,0 +1,113 @@
+html, body {
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	color: $text;
+	font-family: $font-family;
+	font-weight: $font-weight-light;
+
+	@include size-13-24;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+	margin: 0;
+	color: $text-title;
+	font-weight: $font-weight-light;
+	letter-spacing: .5px;
+
+	small, .small {
+		font-size: 65%;
+		font-weight: $font-weight-regular;
+
+		&.sidetitle {
+			font-style: italic;
+			margin-left: 0.5rem;
+		}
+
+		&.subtitle {
+			display: block;
+			margin-top: 8px;
+		}
+	}
+}
+
+h1, .h1 {
+	@include size-33-49;
+}
+
+h2, .h2 {
+	@include size-28-42;
+}
+
+h3, .h3 {
+	@include size-23-34;
+}
+
+h4, .h4 {
+	@include size-19-28;
+}
+
+h5, .h5 {
+	font-weight: $font-weight-regular;
+
+	@include size-16-24;
+}
+
+h6, .h6 {
+	font-weight: $font-weight-regular;
+
+	@include size-14-21;
+}
+
+p, .paragraph {
+	margin: 0;
+	color: $text;
+
+	&.lead {
+		@include size-16-32;
+	}
+
+	&.small {
+		@include size-11-24;
+	}
+}
+
+a, .href {
+	color: $text;
+	font-weight: $font-weight-light;
+	text-decoration: none;
+}
+
+mark, .mark {
+	padding: .2em;
+	background-color: $yellow-extra;
+}
+
+del, .del, s {
+	text-decoration: line-through;
+}
+
+ins, .ins, u {
+	text-decoration: underline;
+}
+
+small, .small {
+	&:not(.content) {
+		font-family: $font-family;
+		font-weight: $font-weight-regular;
+		font-size: 80%;
+		color: $text-gray;
+	}
+}
+
+strong, .strong {
+	@include strong;
+}
+
+em, .em {
+	font-style: italic;
+}

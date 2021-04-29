@@ -1,0 +1,15 @@
+# Group Config
+This section groups config resources.
+
+## config [POST /api/config]
+Get the site config.
+
++ Response 200 (application/json)
+    + Attributes (object)
+        + data (object)
+            + [post_type] (array[Post], fixed-type)
+        + additional (object)
+            + landing_post (Post, nullable)
+            + langs (object)
+                + [lang_type] (object)
+                    + [key]: `value` (string)

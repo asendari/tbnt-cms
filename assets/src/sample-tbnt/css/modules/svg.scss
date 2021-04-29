@@ -1,0 +1,41 @@
+.svg {
+	display: inline-block;
+	width: initial;
+	height: initial;
+	vertical-align: middle;
+
+	.svg--anim {
+		@include transition;
+	}
+}
+
+.svg--burger {
+	path {
+		transform-origin: center;
+
+		@include transition;
+
+		&:nth-child(3) {
+			opacity: .001;
+		}
+	}
+
+	&.--active {
+		path {
+			&:nth-child(1),
+			&:nth-child(4) {
+				transform: scale(.8);
+				opacity: .001;
+			}
+
+			&:nth-child(2) {
+				transform: rotate(45deg);
+			}
+
+			&:nth-child(3) {
+				transform: rotate(-45deg);
+				opacity: 1;
+			}
+		}
+	}
+}

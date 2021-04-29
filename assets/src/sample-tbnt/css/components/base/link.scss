@@ -1,0 +1,84 @@
+.link {
+	display: inline-flex;
+	align-items: center;
+	cursor: pointer;
+
+	@include typo-a;
+	@include transition;
+
+	&.--chevron {
+		svg {
+			width: 6px;
+			height: 12px;
+			margin-top: -1px;
+			margin-left: 8px;
+			transform: translateY(1px);
+
+			@include transition;
+		}
+
+		&:hover {
+			svg {
+				transform: translateX(4px) translateY(1px);
+			}
+		}
+	}
+
+	&.--button {
+		height: 48px;
+		padding: 15px 20px;
+		color: $white;
+		background-color: $primary;
+		border: 1px solid;
+		border-color: transparent;
+		border-radius: 24px;
+
+		&.--small {
+			height: 34px;
+			padding: 8px 12px;
+			border-radius: 18px;
+		}
+
+		&.--secondary {
+			background-color: $secondary;
+		}
+
+		&.--lined {
+			background-color: transparent;
+			border-color: $primary;
+			color: $primary;
+
+			&.--secondary {
+				background-color: transparent;
+				border-color: $secondary;
+				color: $secondary;
+			}
+		}
+
+		&.--chevron {
+			svg {
+				margin-left: 68px;
+
+				@include touch {
+					margin-left: 20px;
+				}
+			}
+		}
+	}
+
+	&.--opacity {
+		opacity: .5;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	&.--loading,
+	&.--disabled {
+		opacity: .5;
+		cursor: default;
+
+		@include pointer-none;
+	}
+}

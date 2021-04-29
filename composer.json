@@ -1,0 +1,56 @@
+{
+    "name": "tbntswiss/cms",
+    "description": "TBNT CMS",
+    "type": "project",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Alexandre Pilloud",
+            "email": "alex@tbnt.digital",
+            "homepage": "https://tbnt.digital"
+        }
+    ],
+    "require": {
+        "php": "^7.3",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-mysqli": "*",
+        "ext-openssl": "*",
+        "ext-zip": "*",
+        "ext-zlib": "*",
+        "barryvdh/laravel-cors": "^0.11.4",
+        "doctrine/dbal": "^2.10",
+        "goldspecdigital/laravel-eloquent-uuid": "^6.2",
+        "google/apiclient": "^2.4",
+        "guzzlehttp/guzzle": "~6",
+        "intervention/image": "^2.5",
+        "laravel/passport": "^8.1",
+        "laravelcollective/html": "^6.0",
+        "lcobucci/jwt": "^3.3",
+        "moontoast/math": "^1.2",
+        "mpdf/mpdf": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tbnt\\Cms\\": "src/"
+        },
+        "files": [
+            "helpers/loader.php"
+        ]
+    },
+    "scripts": {
+        "build-admin": [
+            "npm run prod",
+            "rm -f ./public/assets/admin.zip",
+            "cd ./public/assets/admin-cms && zip -vr -X ../admin.zip ./"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Tbnt\\Cms\\Providers\\CmsServiceProvider"
+            ]
+        }
+    }
+}

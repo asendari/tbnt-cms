@@ -1,0 +1,37 @@
+# Data Structures
+
+## Token (object)
++ data (User) - User profile
++ token: `ey...` (string) - JWT token
+
+## User (object)
++ email: `test@test.test` (string) - User email
++ id: `1` (number) - User id
+
+## Post (object)
++ canonical (object) - Post canonical urls
+    + [lang_code]: `/` (string) - Post lang url
++ id: `1` (number) - Post id
++ items (object) - Post items
+    + [key]: `value` (string) - Post item
++ lang (object) - Post lang
+    + description: `Home` (string) - Post description
+    + title: `Home` (string) - Post title
+    + url: `/` (string) - Post url
++ published_at: `2020-01-01T12:30:00Z` (string) - Post published at
++ type: `page` (string) - Post type
+
+## Meta Links (object)
++ first: `https://addmin.digital/api/app/<current_endpoint>?page=1` (string)
++ last: `https://addmin.digital/api/app/<current_endpoint>?page=17` (string)
++ prev: `null` (string, nullable)
++ next: `https://addmin.digital/api/app/<current_endpoint>?page=2` (string, nullable)
+
+## Meta (object)
++ current_page: `1` (number)
++ from: `1` (number)
++ last_page: `17` (number)
++ path: `https://addmin.digital/api/app/<current_endpoint>` (string)
++ per_page: `15` (number)
++ to: `15` (number)
++ total: `245` (number)

@@ -1,0 +1,9 @@
+@import "~lib/css/components/base/input/textarea.scss";
+
+.input--type-textarea {
+	.input--input {
+		.input-value {
+			resize: none;
+		}
+	}
+}

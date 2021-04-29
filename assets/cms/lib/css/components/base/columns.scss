@@ -1,0 +1,17 @@
+/**
+ * @name columns
+ * @description Columns base css for ReactJS personal library
+ * @file SCSS Columns Component
+ *
+ * @version 1.0.0 - 2019-11-28
+ * @author Alexandre Pilloud
+ */
+
+.columns {
+	display: flex;
+	flex-wrap: wrap;
+
+	.columns--col {
+
+	}
+}

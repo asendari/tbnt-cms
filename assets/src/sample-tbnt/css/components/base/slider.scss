@@ -1,0 +1,14 @@
+.slider {
+	.slider--swipable {
+		overflow: hidden;
+
+		.slider--images {
+			display: flex;
+
+			.slider--image {
+				flex-shrink: 0;
+				width: 100%;
+			}
+		}
+	}
+}

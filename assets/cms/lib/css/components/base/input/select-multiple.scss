@@ -1,0 +1,86 @@
+/**
+ * @name select-multiple
+ * @description Select multiple base css for ReactJS personal library
+ * @file SCSS Select multiple Input Component
+ *
+ * @version 1.0.0 - 2019-11-28
+ * @author Alexandre Pilloud
+ */
+
+.input-value--select-multiple {
+	.Select-control {
+		.Select-multi-value-wrapper {
+			.Select-placeholder {
+
+			}
+
+			.Select-value {
+				.Select-value-icon {
+					&:hover {
+
+					}
+				}
+
+				.Select-value-label {
+
+				}
+			}
+
+			.Select-input {
+				input {
+
+				}
+			}
+		}
+
+		.Select-clear-zone {
+			&:hover {
+
+			}
+
+			.Select-clear {
+
+			}
+		}
+
+		.Select-arrow-zone {
+			.Select-arrow {
+
+			}
+		}
+	}
+
+	.Select-menu-outer {
+		.Select-menu {
+			&:not(.resize-triggers) {
+				.VirtualSelectGrid {
+					& > div {
+						.VirtualizedSelectOption {
+							&.VirtualizedSelectFocusedOption {
+
+							}
+						}
+					}
+				}
+			}
+
+			.resize-triggers {
+				.expand-trigger {
+					div {
+
+					}
+				}
+
+				.contract-trigger {
+
+				}
+			}
+		}
+	}
+
+	&.is-focused {
+		.Select-control {
+
+		}
+	}
+}

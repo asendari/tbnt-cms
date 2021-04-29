@@ -1,0 +1,28 @@
+/**
+ * @name checkbox
+ * @description Checkbox base css for ReactJS personal library
+ * @file SCSS Checkbox Input Component
+ *
+ * @version 1.0.0 - 2019-11-28
+ * @author Alexandre Pilloud
+ */
+
+.input-value--checkbox {
+	display: inline-flex;
+	flex-wrap: wrap;
+
+	.input-value--checkbox-input {
+		cursor: pointer;
+
+		input {
+			margin-right: 16px;
+			cursor: pointer;
+		}
+	}
+
+	.input-value--checkbox-label {
+		.input-value--checkbox-label-default {
+			cursor: pointer;
+		}
+	}
+}

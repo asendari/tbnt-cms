@@ -1,0 +1,14 @@
+@import "~lib/css/components/base/modal.scss";
+
+#modal-wrapper {
+	width: 100%;
+
+	.modal {
+		position: fixed;
+		top: 0; left: 0; right: 0; bottom: 0;
+
+		.modal--window {
+			position: relative;
+		}
+	}
+}

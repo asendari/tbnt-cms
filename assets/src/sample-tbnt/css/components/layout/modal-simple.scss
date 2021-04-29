@@ -1,0 +1,111 @@
+.modal-simple {
+	background-color: $overlay-white;
+
+	.modal--window {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		padding: 7vh 48px;
+
+		@include mobile {
+			padding: 24px;
+		}
+
+		.modal-simple--content {
+			position: relative;
+			z-index: 1;
+			background-color: $white;
+			border-radius: 5px;
+			width: 100%;
+			max-width: 540px;
+			overflow-y: auto;
+
+			@include shadow-large;
+			@include overflow-auto-y;
+
+			.modal-simple--header {
+				display: flex;
+				align-items: center;
+				padding: 32px 48px;
+				border-bottom: 1px solid $border;
+
+				@include mobile {
+					padding: 24px;
+					padding-right: 48px;
+				}
+
+				@include tablet {
+					min-height: 120px;
+				}
+
+				* {
+					font-weight: $font-weight-regular;
+
+					@include size-h3;
+				}
+			}
+
+			.modal-simple--body {
+				padding: 32px 48px;
+
+				@include mobile {
+					padding: 24px;
+				}
+			}
+
+			.modal-simple--footer {
+				display: flex;
+				justify-content: center;
+				padding: 32px 64px;
+				border-top: 1px solid $border;
+
+				@include mobile {
+					padding: 24px;
+				}
+
+				@include tablet {
+					min-height: 90px;
+				}
+
+				* {
+					font-weight: $font-weight-regular;
+				}
+			}
+
+			.modal-simple--close {
+				position: absolute;
+				padding: 16px;
+				cursor: pointer;
+
+				&.--top-right {
+					top: 0; right: 0;
+				}
+
+				&.--top-left {
+					top: 0; left: 0;
+				}
+
+				&.--bottom-right {
+					bottom: 0; right: 0;
+				}
+
+				&.--bottom-left {
+					bottom: 0; left: 0;
+				}
+
+				svg {
+					width: 18px;
+					height: 18px;
+				}
+			}
+		}
+
+		.modal-simple--overlay {
+			position: absolute;
+			top: 0; left: 0; right: 0; bottom: 0;
+			z-index: 0;
+		}
+	}
+}

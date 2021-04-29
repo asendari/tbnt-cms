@@ -1,0 +1,14 @@
+/**
+ * @name dialog
+ * @description Dialog base css for ReactJS personal library
+ * @file SCSS Dialog Component
+ *
+ * @version 1.0.0 - 2019-11-28
+ * @author Alexandre Pilloud
+ */
+
+#dialog-wrapper {
+	position: fixed;
+	top: 0; left: 0;
+	z-index: 1300;
+}

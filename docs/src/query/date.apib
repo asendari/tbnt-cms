@@ -1,0 +1,8 @@
+    + date (string, optional) - The datetime of the first query.
+
+        This value ensure that every sub-calls will returns results below the date.
+
+        The date value should be the datetime when querying for the first time the pagination (page 1)
+        and should be reseted when refreshing the pagination (restarting on page 1).
+
+        + Default: `now()`

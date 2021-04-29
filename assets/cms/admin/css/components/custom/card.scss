@@ -1,0 +1,60 @@
+.card {
+	position: relative;
+	flex-direction: column;
+	border: 1px solid $white;
+	background-color: $white;
+
+	@include transition;
+
+	&:hover {
+		border-color: $dark-extra !important;
+
+		@include shadow;
+	}
+
+	.card--header {
+		padding: 16px;
+		border-bottom: 1px solid $divider-light;
+		// background-color: $white;
+
+		@include strong;
+
+		&.--no-border {
+			border-bottom: 1px solid transparent !important;
+		}
+	}
+
+	.card--body {
+		flex: 1 1 auto;
+		padding: 16px;
+		// background-color: $white;
+	}
+
+	.card {
+		border: 1px solid $divider-light;
+	}
+
+	&.superadmin {
+		border: 1px solid $purple-extra;
+		background-color: $purple-extra;
+
+		.card--header {
+			color: $purple;
+			border-bottom: 1px solid rgba($white, .4);
+
+			svg {
+				&.svg--arrow-up,
+				&.svg--arrow-down,
+				&.svg--add {
+					.svg--anim {
+						fill: rgba($purple, .4);
+					}
+				}
+			}
+		}
+
+		.card {
+			background-color: $purple-extra;
+		}
+	}
+}

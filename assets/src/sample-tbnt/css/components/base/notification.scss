@@ -1,0 +1,87 @@
+@import "~lib/css/components/base/notification.scss";
+
+#notification-wrapper {
+	width: 100%;
+
+	.notification {
+		color: $text-color;
+		background-color: $gray-lighter;
+		margin-bottom: 16px;
+
+		.notification--message {
+			max-width: $breakpoint-widescreen;
+			padding: 16px;
+			font-size: 16px;
+			text-align: center;
+		}
+
+		.notification--close {
+			position: absolute;
+			top: 0; right: 0; bottom: 0;
+			z-index: 10;
+			display: flex;
+			align-items: center;
+			padding: 16px;
+			cursor: pointer;
+
+			svg {
+				width: 16px;
+				height: auto;
+
+				.svg--anim {
+					stroke: $black;
+				}
+			}
+		}
+
+		&.--success {
+			color: $white;
+			background-color: $green;
+
+			svg {
+				.svg--anim {
+					stroke: $white;
+				}
+			}
+		}
+
+		&.--info {
+			color: $white;
+			background-color: $blue;
+
+			svg {
+				.svg--anim {
+					stroke: $white;
+				}
+			}
+		}
+
+		&.--warning {
+			color: $white;
+			background-color: $orange;
+
+			svg {
+				.svg--anim {
+					stroke: $white;
+				}
+			}
+		}
+
+		&.--danger {
+			color: $white;
+			background-color: $danger;
+
+			svg {
+				.svg--anim {
+					stroke: $white;
+				}
+			}
+		}
+
+		&:hover {
+			.notification--close {
+				opacity: 1;
+			}
+		}
+	}
+}

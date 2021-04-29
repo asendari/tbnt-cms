@@ -1,0 +1,83 @@
+@import "~lib/css/components/base/input.scss";
+
+.input {
+	::placeholder {
+		@include placeholder;
+	}
+
+	&:not(.input--type-hidden) {
+		.input--input {
+			padding: 8px 16px;
+			border: 1px solid $gray;
+			border-radius: 2px;
+
+			input,
+			textarea {
+				display: block;
+				width: 100%;
+                font-weight: $font-weight-light;
+
+				@include input;
+			}
+		}
+	}
+
+	.input--title {
+		.input--label {
+			.input--label-lang {
+				img {
+					height: 10px;
+					margin-left: 4px;
+				}
+			}
+		}
+	}
+
+	&.--superadmin {
+		&:not(.input--type-hidden) {
+			.input--label {
+				color: $purple;
+			}
+
+			.input--input {
+				border-color: rgba($purple, .8);
+			}
+		}
+	}
+
+	&.--error {
+		::placeholder {
+			color: $warning !important;
+		}
+
+		.input--title {
+			.input--label {
+				color: $warning;
+			}
+		}
+
+		.input--input {
+			border-color: $warning;
+
+			.input-value {
+				&:not(.input-value--select-custom) {
+					color: $warning;
+				}
+
+				&.input-value--select-custom {
+					.input-value--select-custom-current-value {
+						color: $warning;
+					}
+				}
+			}
+		}
+
+		.input--error {
+			padding-top: 16px;
+			color: $warning;
+			text-align: left;
+
+			@include size-13-24;
+		}
+	}
+}

@@ -1,0 +1,10 @@
+.panels {
+	position: relative;
+	display: flex;
+	width: 100%;
+
+	.panels--panel {
+		flex-shrink: 0;
+		width: 100%;
+	}
+}

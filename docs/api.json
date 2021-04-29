@@ -1,0 +1,329 @@
+{
+	"info": {
+		"name": "TBNT CMS",
+		"_postman_id": "TBNT CMS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/docs/index.html"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"item": [
+						{
+							"name": "Login",
+							"request": {
+								"url": {
+									"protocol": "https",
+									"host": "tbnt.digital",
+									"path": "/api/auth/login"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"test@test.test\",\n  \"password\": \"password\"\n}"
+								}
+							}
+						}
+					],
+					"request": {
+						"url": {
+							"protocol": "",
+							"host": "",
+							"path": ""
+						},
+						"body": {}
+					}
+				},
+				{
+					"name": "Signin",
+					"item": [
+						{
+							"name": "Signin",
+							"request": {
+								"url": {
+									"protocol": "https",
+									"host": "tbnt.digital",
+									"path": "/api/auth/signin"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"test@test.test\",\n  \"password\": \"password\"\n}"
+								}
+							}
+						}
+					],
+					"request": {
+						"url": {
+							"protocol": "",
+							"host": "",
+							"path": ""
+						},
+						"body": {}
+					}
+				},
+				{
+					"name": "Refresh token",
+					"item": [
+						{
+							"name": "Refresh token",
+							"request": {
+								"url": {
+									"protocol": "https",
+									"host": "tbnt.digital",
+									"path": "/api/auth/refresh-token"
+								},
+								"method": "GET",
+								"body": {}
+							}
+						}
+					],
+					"request": {
+						"url": {
+							"protocol": "",
+							"host": "",
+							"path": ""
+						},
+						"body": {}
+					}
+				},
+				{
+					"name": "Forgot password",
+					"item": [
+						{
+							"name": "Forgot password",
+							"request": {
+								"url": {
+									"protocol": "https",
+									"host": "tbnt.digital",
+									"path": "/api/auth/forgot-password"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"test@test.test\"\n}"
+								}
+							}
+						}
+					],
+					"request": {
+						"url": {
+							"protocol": "",
+							"host": "",
+							"path": ""
+						},
+						"body": {}
+					}
+				},
+				{
+					"name": "Recover password",
+					"item": [
+						{
+							"name": "Recover password",
+							"request": {
+								"url": {
+									"protocol": "https",
+									"host": "tbnt.digital",
+									"path": "/api/auth/recover-password"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"test@test.test\",\n  \"password\": \"password\",\n  \"password_confirmation\": \"password\",\n  \"token\": \"abcd\"\n}"
+								}
+							}
+						}
+					],
+					"request": {
+						"url": {
+							"protocol": "",
+							"host": "",
+							"path": ""
+						},
+						"body": {}
+					}
+				},
+				{
+					"name": "Logout",
+					"item": [
+						{
+							"name": "Logout",
+							"request": {
+								"url": {
+									"protocol": "https",
+									"host": "tbnt.digital",
+									"path": "/api/auth/logout"
+								},
+								"method": "GET",
+								"body": {}
+							}
+						}
+					],
+					"request": {
+						"url": {
+							"protocol": "",
+							"host": "",
+							"path": ""
+						},
+						"body": {}
+					}
+				}
+			],
+			"request": {
+				"url": {
+					"protocol": "",
+					"host": "",
+					"path": ""
+				},
+				"body": {}
+			}
+		},
+		{
+			"name": "Config",
+			"item": [
+				{
+					"name": "config",
+					"item": [
+						{
+							"name": "config",
+							"request": {
+								"url": {
+									"protocol": "https",
+									"host": "tbnt.digital",
+									"path": "/api/config"
+								},
+								"method": "POST",
+								"body": {}
+							}
+						}
+					],
+					"request": {
+						"url": {
+							"protocol": "",
+							"host": "",
+							"path": ""
+						},
+						"body": {}
+					}
+				}
+			],
+			"request": {
+				"url": {
+					"protocol": "",
+					"host": "",
+					"path": ""
+				},
+				"body": {}
+			}
+		},
+		{
+			"name": "Posts",
+			"item": [
+				{
+					"name": "List",
+					"item": [
+						{
+							"name": "List",
+							"request": {
+								"url": {
+									"protocol": "https",
+									"host": "tbnt.digital",
+									"path": "/api/posts/list",
+									"query": [
+										{
+											"key": "order",
+											"description": "The order of the result.\n\n+ `visible_at-1`\n\n+ `visible_at-0`"
+										},
+										{
+											"key": "page_count",
+											"description": "The number of results to return per page.\n\nA value of `-1` would return all the results."
+										},
+										{
+											"key": "date",
+											"description": "The datetime of the first query.\n\nThis value ensure that every sub-calls will returns results below the date.\n\nThe date value should be the datetime when querying for the first time the pagination (page 1)\nand should be reseted when refreshing the pagination (restarting on page 1)."
+										}
+									]
+								},
+								"method": "POST",
+								"body": {}
+							}
+						}
+					],
+					"request": {
+						"url": {
+							"protocol": "",
+							"host": "",
+							"path": ""
+						},
+						"body": {}
+					}
+				},
+				{
+					"name": "Details",
+					"item": [
+						{
+							"name": "Details",
+							"request": {
+								"url": {
+									"protocol": "https",
+									"host": "tbnt.digital",
+									"path": "/api/posts/:post_id",
+									"variable": [
+										{
+											"key": "post_id",
+											"description": "The id of the post."
+										}
+									]
+								},
+								"method": "POST",
+								"body": {}
+							}
+						}
+					],
+					"request": {
+						"url": {
+							"protocol": "",
+							"host": "",
+							"path": ""
+						},
+						"body": {}
+					}
+				}
+			],
+			"request": {
+				"url": {
+					"protocol": "",
+					"host": "",
+					"path": ""
+				},
+				"body": {}
+			}
+		}
+	]
+}

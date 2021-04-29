@@ -1,0 +1,59 @@
+.content {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+
+	&.--xx-tiny {
+		@include tablet {
+			max-width: 296px;
+		}
+	}
+
+	&.--x-tiny {
+		@include tablet {
+			max-width: 336px;
+		}
+	}
+
+	&.--tiny {
+		@include tablet {
+			max-width: 376px;
+		}
+	}
+
+	&.--small {
+		@include tablet {
+			max-width: 422px;
+		}
+	}
+
+	&.--medium {
+		@include tablet {
+			max-width: 464px;
+		}
+	}
+
+	&.--large {
+		@include tablet {
+			max-width: 936px;
+		}
+	}
+
+	&.--x-large {
+		@include tablet {
+			max-width: 1024px;
+		}
+	}
+
+	&.--stick-left {
+		@include tablet {
+			margin-left: 0;
+		}
+	}
+
+	&.--stick-right {
+		@include tablet {
+			margin-right: 0;
+		}
+	}
+}

@@ -1,0 +1,99 @@
+@import "~lib/css/components/base/notification.scss";
+
+#notification-wrapper {
+	width: 100%;
+
+	.notification {
+		color: $secondary;
+		background-color: $secondary-extra;
+		margin-bottom: 16px;
+
+		.notification--message {
+			max-width: $breakpoint-widescreen;
+			padding: 16px;
+			font-size: 16px;
+			text-align: center;
+		}
+
+		.notification--close {
+			position: absolute;
+			top: 0; right: 0; bottom: 0;
+			z-index: 10;
+			display: flex;
+			align-items: center;
+			padding: 16px;
+			cursor: pointer;
+
+			svg {
+				width: 16px;
+				height: auto;
+
+				.svg--anim {
+					fill: $secondary;
+				}
+			}
+		}
+
+		&.--primary {
+			color: $primary;
+			background-color: $primary-extra;
+
+			svg {
+				.svg--anim {
+					fill: $primary;
+				}
+			}
+
+		}
+
+		&.--success {
+			color: $success;
+			background-color: $success-extra;
+
+			svg {
+				.svg--anim {
+					fill: $success;
+				}
+			}
+		}
+
+		&.--info {
+			color: $info;
+			background-color: $info-extra;
+
+			svg {
+				.svg--anim {
+					fill: $info;
+				}
+			}
+		}
+
+		&.--warning {
+			color: $warning;
+			background-color: $warning-extra;
+
+			svg {
+				.svg--anim {
+					fill: $warning;
+				}
+			}
+		}
+
+		&.--danger {
+			color: $danger;
+			background-color: $danger-extra;
+
+			svg {
+				.svg--anim {
+					fill: $danger;
+				}
+			}
+		}
+
+		&:hover {
+			.notification--close {
+				opacity: 1;
+			}
+		}
+	}
+}

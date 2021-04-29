@@ -1,0 +1,61 @@
+/**
+ * @name margin
+ * @description Margin mixins scss for ReactJS personal library
+ * @file SCSS Margin mixins
+ *
+ * @version 1.0.0 - 2019-11-28
+ * @author Alexandre Pilloud
+ */
+
+/* --------------------------------------------------------------------------
+ * Margin
+ */
+
+$margin-max: 200px !default;
+$margin-increment: 8px !default;
+
+@mixin margin-gen ($side: '') {
+	@for $i from 0 through ($margin-max / $margin-increment) {
+		$margin-calc: $margin-increment * $i;
+		$margin-name: 'margin-' + strip-unit($margin-calc);
+
+		@if ($side == '') {
+			@include all-devices($margin-name) {
+				margin: $margin-calc !important;
+			}
+		}
+		@else {
+			@include all-devices(#{$margin-name}-#{$side}) {
+				margin-#{$side}: $margin-calc !important;
+			}
+		}
+	}
+}
+
+@mixin cancel-margin($margin: 0) {
+	@include cancel-margin-top($margin);
+	@include cancel-margin-left($margin);
+	@include cancel-margin-right($margin);
+	@include cancel-margin-bottom($margin);
+}
+
+@mixin cancel-margin-top($margin: 0) {
+	@include _cancel-margin(first-child, margin-top, $margin);
+}
+
+@mixin cancel-margin-left($margin: 0) {
+	@include _cancel-margin(first-child, margin-left, $margin);
+}
+
+@mixin cancel-margin-right($margin: 0) {
+	@include _cancel-margin(last-child, margin-right, $margin);
+}
+
+@mixin cancel-margin-bottom($margin: 0) {
+	@include _cancel-margin(last-child, margin-bottom, $margin);
+}
+
+@mixin _cancel-margin($cancel, $side, $margin: 0) {
+	@if ($margin != 0) { #{$side}: $margin; }
+	&:#{$cancel} { #{$side}: 0; }
+}

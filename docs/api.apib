@@ -1,0 +1,324 @@
+FORMAT: 1A
+HOST: https://tbnt.digital
+
+# TBNT CMS
+This page provide documentation of [TBNT CMS API](https://tbnt.digital).
+
+<br />
+
+## Documentation
++ [API Blueprint](https://apiblueprint.org)
++ [Aglio CLI (renderer)](https://github.com/danielgtaylor/aglio)
++ [Snowboard CLI (convert)](https://github.com/bukalapak/snowboard)
++ [Vanadia CLI (export)](https://github.com/bukalapak/vanadia)
+
+**Export**
+
+`npm run docs`
+
+<br />
+
+## Aglio CLI
+**Server**
+
+`npm run doc_aglio_watch`
+
+**Output**
+
+`npm run doc_aglio`
+
+<br />
+
+## Snowboard CLI
+`npm run doc_snowboard`
+
+<br />
+
+## Vanadia CLI
+`npm run doc_vanadia`
+
+<br />
+
+## Start
++ `composer install`
++ `npm i`
++ import `database/dumps/<project-last-export.sql-gz>`
++ duplicate `.env.example` to `.env`
++ update `.env` properties according to your needs
+
+<br />
+
+## Env common props
++ `DB_HOST`
++ `DB_PORT`
++ `DB_DATABASE`
++ `DB_USERNAME`
++ `DB_PASSWORD`
++ `GOOGLE_ANALYTICS_ID`
++ `GOOGLE_TAG_MANAGER_ID`
++ `FACEBOOK_PIXEL_ID`
+
+<br />
+
+## Custom CLI
+**Create user**
+
+`php artisan create-user`
+
+**Create a backup of the database using mysqldump (may export your db without emoji issues)**
+
+`php artisan mysql-dump`
+
+**Reset laravel passport**
+
+`php artisan set-laravel-passport`
+
+**Decode string**
+
+`php artisan string-decode`
+
+**Decrypt string**
+
+`php artisan string-decrypt`
+
+**Encode string**
+
+`php artisan string-encode`
+
+**Encrypt string**
+
+`php artisan string-encrypt`
+
+**Hash string**
+
+`php artisan string-hash`
+
+<br />
+
+## Success
+All successfull requests are returned with a `Status Code: 200`:
+
+```
+HTTP/1.1 200 OK
+```
+
+And in JSON format:
+
+```
+Content-Type: application/json
+```
+
+<br />
+
+## Errors
+All failed requests are returned with a `Status Code: <code>`:
+
+```
+HTTP/1.1 404 Not Found
+```
+
+In JSON format:
+
+```
+Content-Type: application/json
+```
+
+And formated with a `code` and a `message` attributes:
+
+```
+{
+    "code": 404,
+    "message": "The origin server did not find a current representation for the target resource or is not willing to disclose that one exists.",
+}
+```
+
+<br />
+
+## Authentication
+First, you will need to signin/login to get a `token`.
+
+Then, you must append the returned `token` to the headers to make the authenticated calls:
+
+```
+Authentication: Bearer <token>
+```
+
+When the token is expired, you will receive a `Status Code: 401`.
+
+Then, to regenerate a new token:
+
++ Call `/api/auth/refresh-token` to get a new `token`.
++ Update the `Authentication: Bearer` header.
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+# Data Structures
+
+## Token (object)
++ data (User) - User profile
++ token: `ey...` (string) - JWT token
+
+## User (object)
++ email: `test@test.test` (string) - User email
++ id: `1` (number) - User id
+
+## Post (object)
++ canonical (object) - Post canonical urls
+    + [lang_code]: `/` (string) - Post lang url
++ id: `1` (number) - Post id
++ items (object) - Post items
+    + [key]: `value` (string) - Post item
++ lang (object) - Post lang
+    + description: `Home` (string) - Post description
+    + title: `Home` (string) - Post title
+    + url: `/` (string) - Post url
++ published_at: `2020-01-01T12:30:00Z` (string) - Post published at
++ type: `page` (string) - Post type
+
+## Meta Links (object)
++ first: `https://addmin.digital/api/app/<current_endpoint>?page=1` (string)
++ last: `https://addmin.digital/api/app/<current_endpoint>?page=17` (string)
++ prev: `null` (string, nullable)
++ next: `https://addmin.digital/api/app/<current_endpoint>?page=2` (string, nullable)
+
+## Meta (object)
++ current_page: `1` (number)
++ from: `1` (number)
++ last_page: `17` (number)
++ path: `https://addmin.digital/api/app/<current_endpoint>` (string)
++ per_page: `15` (number)
++ to: `15` (number)
++ total: `245` (number)
+
+
+# Group Auth
+This section groups auth resources.
+
+## Login [POST /api/auth/login]
+Log in user.
+
++ Request login (application/json)
+    + Attributes (object)
+        + email: `test@test.test` (string) - User email
+        + password: `password` (string) - User password
+
++ Response 200 (application/json)
+    + Attributes (Token)
+
+## Signin [POST /api/auth/signin]
+Create user.
+
++ Request signin (application/json)
+    + Attributes (object)
+        + email: `test@test.test` (string) - User email
+        + password: `password` (string) - User password
+
++ Response 200 (application/json)
+    + Attributes (Token)
+
+## Refresh token [GET /api/auth/refresh-token]
+Refresh user token.
+
++ Response 200 (application/json)
+    + Attributes (Token)
+
+## Forgot password [POST /api/auth/forgot-password]
+Send an email with a password recovery link.
+
++ Request forgot password (application/json)
+    + Attributes (object)
+        + email: `test@test.test` (string) - User email
+
++ Response 200 (application/json)
+
+        Empty
+
+## Recover password [POST /api/auth/recover-password]
+Reset user password.
+
++ Request recover password (application/json)
+    + Attributes (object)
+        + email: `test@test.test` (string) - User email
+        + password: `password` (string) - User password
+        + password_confirmation: `password` (string) - Password confirmation
+        + token: `abcd` (string) - Recover password token
+
++ Response 200 (application/json)
+
+        Empty
+
+## Logout [GET /api/auth/logout]
+Log out user.
+
++ Response 200 (application/json)
+
+        Empty
+
+# Group Config
+This section groups config resources.
+
+## config [POST /api/config]
+Get the site config.
+
++ Response 200 (application/json)
+    + Attributes (object)
+        + data (object)
+            + [post_type] (array[Post], fixed-type)
+        + additional (object)
+            + landing_post (Post, nullable)
+            + langs (object)
+                + [lang_type] (object)
+                    + [key]: `value` (string)
+
+# Group Posts
+This section groups posts resources.
+
+## List [POST /api/posts/list{?date,order,page_count}]
+List posts.
+
++ Parameters
+    + date (string, optional) - The datetime of the first query.
+
+        This value ensure that every sub-calls will returns results below the date.
+
+        The date value should be the datetime when querying for the first time the pagination (page 1)
+        and should be reseted when refreshing the pagination (restarting on page 1).
+
+        + Default: `now()`
+
+    + order (enum[string], optional) - The order of the result.
+        + `visible_at-1`
+        + `visible_at-0`
+        + Default: `visible_at-1`
+    + page_count (number, optional) - The number of results to return per page.
+
+        A value of `-1` would return all the results.
+
+        + Default: `15`
+
+
++ Response 200 (application/json)
+    + Attributes (object)
+        + data (array[Post], fixed-type)
+        + links (Meta Links) - Pagination links
+        + meta (Meta) - Pagination meta
+
+
+## Details [POST /api/posts/{post_id}]
+Get post details.
+
++ Parameters
+    + post_id (number, required) - The id of the post.
+
++ Response 200 (application/json)
+    + Attributes (object)
+        + data (Post)
+
+

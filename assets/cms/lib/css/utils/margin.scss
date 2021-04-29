@@ -1,0 +1,40 @@
+/**
+ * @name margin
+ * @description Margin utils css for ReactJS personal library
+ * @file SCSS Margin utils
+ *
+ * @version 1.0.0 - 2019-11-28
+ * @author Alexandre Pilloud
+ */
+
+@include margin-gen;
+@include margin-gen('top');
+@include margin-gen('left');
+@include margin-gen('right');
+@include margin-gen('bottom');
+@include margin-gen('vertical');
+@include margin-gen('horizontal');
+
+@include all-devices('margin-auto') { margin: auto !important; }
+@include all-devices('margin-auto-top') { margin-top: auto !important; }
+@include all-devices('margin-auto-left') { margin-left: auto !important; }
+@include all-devices('margin-auto-right') { margin-right: auto !important; }
+@include all-devices('margin-auto-bottom') { margin-bottom: auto !important; }
+@include all-devices('margin-auto-vertical') { margin-top: auto !important; margin-bottom: auto !important; }
+@include all-devices('margin-auto-horizontal') { margin-left: auto !important; margin-right: auto !important; }
+
+@include all-devices('margin-none') { margin: 0 !important; }
+@include all-devices('margin-none-top') { margin-top: 0 !important; }
+@include all-devices('margin-none-left') { margin-left: 0 !important; }
+@include all-devices('margin-none-right') { margin-right: 0 !important; }
+@include all-devices('margin-none-bottom') { margin-bottom: 0 !important; }
+@include all-devices('margin-none-vertical') { margin-top: 0 !important; margin-bottom: 0 !important; }
+@include all-devices('margin-none-horizontal') { margin-left: 0 !important; margin-right: 0 !important; }
+
+@include all-devices('margin-cancel') { @include cancel-margin; }
+@include all-devices('margin-cancel-top') { @include cancel-margin-top; }
+@include all-devices('margin-cancel-left') { @include cancel-margin-left; }
+@include all-devices('margin-cancel-right') { @include cancel-margin-right; }
+@include all-devices('margin-cancel-bottom') { @include cancel-margin-bottom; }
+@include all-devices('margin-cancel-vertical') { @include cancel-margin-top; @include cancel-margin-bottom; }
+@include all-devices('margin-cancel-horizontal') { @include cancel-margin-left; @include cancel-margin-right; }

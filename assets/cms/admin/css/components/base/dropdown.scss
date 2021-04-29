@@ -1,0 +1,46 @@
+@import "~lib/css/components/base/dropdown.scss";
+
+.dropdown {
+	position: relative;
+
+	.dropdown--label {
+		cursor: pointer;
+	}
+
+	.dropdown--content {
+		position: absolute;
+		top: 100%; left: 0; right: 0;
+		z-index: 100;
+		padding-top: 12px;
+
+		.dropdown--values {
+			height: 100%;
+			max-height: 320px;
+			padding: 12px 8px;
+			background: white;
+			overflow: auto;
+
+			@include shadow;
+
+			.dropdown--value {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 8px;
+				cursor: pointer;
+
+				&.disabled {
+					span {
+						&:first-child {
+							opacity: .3;
+						}
+
+						&:last-child {
+							color: $primary;
+						}
+					}
+				}
+			}
+		}
+	}
+}

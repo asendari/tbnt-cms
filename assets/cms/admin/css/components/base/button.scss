@@ -1,0 +1,128 @@
+.button {
+	position: relative;
+	padding: 8px 16px;
+	border: 1px solid transparent;
+	border-color: transparent;
+	color: $text;
+	border-radius: 2px;
+	background-color: $secondary;
+	white-space: nowrap;
+	cursor: pointer;
+
+	@include size-13-24;
+	@include family;
+	@include strong;
+	@include transition;
+
+	.button--content {
+		z-index: 2;
+
+		@include transition;
+	}
+
+	.button--loader {
+		z-index: 1;
+
+		@include transition;
+	}
+
+	&.--small {
+		min-width: 168px;
+		padding: 8px 24px;
+	}
+
+	&.--medium {
+		min-width: 168px;
+	}
+
+	&.--large {
+		min-width: 296px;
+	}
+
+	&.--full {
+		width: 100%;
+	}
+
+	&:disabled {
+		cursor: not-allowed;
+	}
+
+	&.--loading {
+		cursor: progress !important;
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0; left: 0; right: 0; bottom: 0;
+			display: block;
+			background: rgba($white, .4);
+		}
+	}
+
+	&.--primary {
+		color: $white;
+		background-color: $primary;
+	}
+
+	&.--success {
+		color: $white;
+		background-color: $success;
+	}
+
+	&.--info {
+		color: $white;
+		background-color: $info;
+	}
+
+	&.--warning {
+		color: $white;
+		background-color: $warning;
+	}
+
+	&.--danger {
+		color: $white;
+		background-color: $danger;
+	}
+
+	&.--purple {
+		color: $white;
+		background-color: $purple;
+	}
+
+	&.--superadmin {
+		color: $purple;
+		border: 2px solid $purple;
+	}
+
+	&:hover {
+		background-color: lighten($secondary, 2%);
+
+		&.--primary {
+			background-color: lighten($primary, 10%);
+		}
+
+		&.--success {
+			background-color: lighten($success, 10%);
+		}
+
+		&.--info {
+			background-color: lighten($info, 10%);
+		}
+
+		&.--warning {
+			background-color: lighten($warning, 10%);
+		}
+
+		&.--danger {
+			background-color: lighten($danger, 10%);
+		}
+
+		&.--purple {
+			background-color: lighten($purple, 10%);
+		}
+
+		&.--superadmin {
+			background-color: lighten($purple, 10%);
+		}
+	}
+}

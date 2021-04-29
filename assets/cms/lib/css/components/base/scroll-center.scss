@@ -1,0 +1,19 @@
+/**
+ * @name scroll-center
+ * @description Scroll center base css for ReactJS personal library
+ * @file SCSS Scroll center Component
+ *
+ * @version 1.0.0 - 2019-11-28
+ * @author Alexandre Pilloud
+ */
+
+.scroll-center {
+	height: 100%;
+	display: flex;
+	align-items: center;
+
+	.scroll-center--content {
+		width: 100%;
+		max-height: 100%;
+	}
+}

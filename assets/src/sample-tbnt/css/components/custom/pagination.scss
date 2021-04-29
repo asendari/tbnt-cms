@@ -1,0 +1,14 @@
+.pagination {
+	.pagination--footer-load-more {
+		&.--first {
+			padding: 48px 0;
+			text-align: center;
+		}
+
+		&:not(.--first) {
+			margin-top: 48px;
+			padding-top: 20px;
+			border-top: 1px solid $border;
+		}
+	}
+}

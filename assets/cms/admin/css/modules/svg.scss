@@ -1,0 +1,15 @@
+.svg {
+	display: inline-block;
+	width: auto;
+	height: auto;
+	margin-top: -1px;
+	vertical-align: middle;
+
+	.svg--anim {
+		@include transition;
+	}
+}
+
+.svg--cloud {
+	transform: translateY(1px);
+}

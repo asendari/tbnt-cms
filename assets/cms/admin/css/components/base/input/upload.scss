@@ -1,0 +1,70 @@
+@import "~lib/css/components/base/input/upload.scss";
+
+.input--type-upload {
+	.input--input {
+		.input-value {
+			.input-value--upload-value {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+				.input-value--upload-input {
+					position: relative;
+
+					.input-value {
+						position: absolute;
+						top: 0; left: 0; right: 0; bottom: 0;
+						z-index: 1;
+						opacity: .001;
+						overflow: hidden;
+						cursor: pointer;
+					}
+
+					span {
+						z-index: 0;
+					}
+				}
+
+				.input-value--upload-delete {
+					cursor: pointer;
+
+					span {
+
+					}
+				}
+			}
+
+			.input-value--upload-preview {
+				.input-value--upload-preview-image {
+					img {
+
+					}
+				}
+
+				.input-value--upload-preview-embed {
+					embed {
+
+					}
+				}
+
+				.input-value--upload-preview-name {
+					span {
+
+					}
+				}
+
+				.input-value--upload-preview-link {
+					span {
+
+					}
+				}
+
+				.input-value--upload-no-file {
+					span {
+
+					}
+				}
+			}
+		}
+	}
+}

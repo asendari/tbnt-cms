@@ -1,0 +1,23 @@
+@mixin ratio-4-1() {
+	@include ratio-parent;
+
+	&:before {
+		padding-top: 25%;
+	}
+}
+
+@mixin ratio-3-1() {
+	@include ratio-parent;
+
+	&:before {
+		padding-top: 33.33%;
+	}
+}
+
+@include all-devices('ratio-4-1') {
+	@include ratio-4-1;
+}
+
+@include all-devices('ratio-3-1') {
+	@include ratio-3-1;
+}

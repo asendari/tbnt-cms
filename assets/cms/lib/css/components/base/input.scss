@@ -1,0 +1,75 @@
+/**
+ * @name input
+ * @description Input base css for ReactJS personal library
+ * @file SCSS Input Component
+ *
+ * @version 1.0.0 - 2019-11-28
+ * @author Alexandre Pilloud
+ */
+
+.input {
+	&.--loader {
+
+	}
+
+	&.--mandatory {
+
+	}
+
+	&.--superadmin {
+
+	}
+
+	&.--success {
+
+	}
+
+	&.--error {
+
+	}
+
+	.input--title {
+		display: flex;
+		justify-content: space-between;
+
+		.input--label {
+
+		}
+
+		.input--buttons {
+			display: flex;
+
+			.input--read-only {
+
+			}
+
+			.input--button-reset {
+
+			}
+
+			.input--button-update {
+
+			}
+
+			.input--counter {
+
+			}
+		}
+	}
+
+	.input--input {
+		.input-value {
+
+		}
+	}
+
+	.input--error {
+		span {
+			white-space: pre-wrap;
+		}
+	}
+
+	.input--success {
+
+	}
+}

@@ -1,0 +1,10 @@
+.input--type-selectCustom {
+	.input--input {
+		padding: 0 !important;
+
+		.dropdown--label,
+		.input-value--select-custom-current-value {
+			padding: 8px 16px;
+		}
+	}
+}

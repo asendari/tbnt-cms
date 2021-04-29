@@ -1,0 +1,111 @@
+html, body {
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+
+	@include typo-p;
+}
+
+h1, .h1 {
+	@include typo-h1;
+}
+
+h2, .h2 {
+	@include typo-h2;
+}
+
+h3, .h3 {
+	@include typo-h3;
+}
+
+h4, .h4 {
+	@include typo-h4;
+}
+
+p, a, li, ol, ul, blockquote, pre, code, abbr, th, td, label, legend, figcaption, .paragraph {
+	@include typo-p;
+
+	&.--small {
+		@include size-p-small;
+	}
+
+	&.--figure {
+		@include size-figure;
+	}
+
+	&.--label {
+		@include size-label;
+		font-weight: $font-weight-regular;
+	}
+}
+
+em {
+	font-style: italic;
+}
+
+.--inherit {
+	font-family: inherit;
+	font-size: inherit !important;
+	font-weight: inherit !important;
+}
+
+.--inherit-family {
+	font-family: inherit;
+}
+
+.--inherit-size {
+	font-size: inherit !important;
+}
+
+.--inherit-weight {
+	font-weight: inherit !important;
+}
+
+.--initial {
+	font-family: initial;
+	font-size: initial;
+	font-weight: initial;
+}
+
+.--initial-family {
+	font-family: initial;
+}
+
+.--initial-size {
+	font-size: initial !important;
+}
+
+.--initial-weight {
+	font-weight: initial !important;
+}
+
+a, span {
+	display: inline-block;
+}
+
+a, .href {
+	@include typo-a;
+}
+
+.spacing {
+	@include typo-spacing;
+}
+
+strong, .strong {
+	@include typo-strong;
+}
+
+mark, .mark {
+	@include typo-mark;
+}
+
+s, del, .del {
+	@include typo-del;
+}
+
+u, ins, .ins {
+	@include typo-underline;
+}
+
+small, .small {
+	@include typo-small;
+}

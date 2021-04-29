@@ -1,0 +1,29 @@
+/**
+ * @name display
+ * @description Display mixins scss for ReactJS personal library
+ * @file SCSS Display mixins
+ *
+ * @version 1.0.0 - 2019-11-28
+ * @author Alexandre Pilloud
+ */
+
+@mixin pointer-none() {
+	pointer-events: none !important;
+
+	@include no-select;
+}
+
+@mixin hidden() {
+	opacity: .001 !important;
+
+	@include pointer-none;
+}
+
+@mixin none() {
+	display: none !important;
+	visibility: hidden !important;
+	color: transparent !important;
+	border-color: transparent !important;
+
+	@include hidden;
+}

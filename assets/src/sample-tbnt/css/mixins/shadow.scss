@@ -1,0 +1,27 @@
+@mixin shadow() {
+	box-shadow: 0 6px 24px rgba(#000000, .1);
+}
+
+@mixin shadow-large() {
+	box-shadow: 0 22px 44px rgba(#000000, .1);
+}
+
+@mixin shadow-input() {
+	box-shadow: 0 10px 24px rgba(#000000, .05);
+}
+
+@mixin text-shadow() {
+	text-shadow: 0 6px 24px rgba(#000000, .1);
+}
+
+@mixin text-shadow-large() {
+	text-shadow: 0 22px 44px rgba(#000000, .1);
+}
+
+@mixin filter-shadow() {
+	filter: drop-shadow(0 6px 24px rgba(#000000, .1));
+}
+
+@mixin filter-shadow-large() {
+	filter: drop-shadow(0 22px 44px rgba(#000000, .1));
+}

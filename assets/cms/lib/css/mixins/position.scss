@@ -1,0 +1,27 @@
+/**
+ * @name position
+ * @description Position mixins scss for ReactJS personal library
+ * @file SCSS Position mixins
+ *
+ * @version 1.0.0 - 2019-11-28
+ * @author Alexandre Pilloud
+ */
+
+/* --------------------------------------------------------------------------
+ * Position
+ */
+
+@mixin position-x($right: auto, $left: auto) {
+	left: $left;
+	right: $right;
+}
+
+@mixin position-y($top: auto, $bottom: auto) {
+	top: $top;
+	bottom: $bottom;
+}
+
+@mixin position-x-y($top: auto, $right: auto, $bottom: auto, $left: auto) {
+	@include position-x($left, $right);
+	@include position-y($top, $bottom);
+}

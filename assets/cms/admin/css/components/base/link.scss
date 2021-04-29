@@ -1,0 +1,42 @@
+.link {
+	display: inline-flex;
+	color: $text;
+	cursor: pointer;
+
+	@include size-13-24;
+
+	.link--content {
+		display: block;
+		overflow: hidden;
+
+		@include anim-hover;
+
+		& > span {
+			position: relative;
+			display: inline-block;
+			white-space: pre;
+
+			i {
+				font-style: normal;
+
+				&:last-child {
+					position: absolute;
+					top: 100%; left: 0;
+				}
+			}
+		}
+	}
+
+	&.--white {
+		color: $white;
+		border-color: $white;
+	}
+
+	&:hover {
+		color: $text;
+
+		&.--white {
+			color: $white;
+		}
+	}
+}

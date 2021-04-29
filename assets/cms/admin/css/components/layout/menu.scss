@@ -1,0 +1,43 @@
+.menu {
+	position: fixed;
+	top: 0; left: 0; right: 0;
+	z-index: 900;
+	width: 100%;
+	padding-left: 280px;
+	overflow: hidden;
+
+	@include shadow;
+
+	.menu--content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		padding: 22px 24px;
+		background-color: $white;
+
+		svg {
+			height: 24px;
+		}
+
+		.menu--left,
+		.menu--right {
+			display: flex;
+			align-items: center;
+		}
+
+		.menu--box {
+			display: flex;
+			align-items: center;
+			margin-right: 16px;
+
+			@include cancel-margin-right;
+		}
+
+		.menu--left {
+			.menu--title {
+				@include size-19-28;
+			}
+		}
+	}
+}

@@ -1,0 +1,138 @@
+/**
+ * @name flex
+ * @description Flex utils css for ReactJS personal library
+ * @file SCSS Flex utils
+ *
+ * @version 1.0.0 - 2019-11-28
+ * @author Alexandre Pilloud
+ */
+
+/* --------------------------------------------------------------------------
+ * Direction
+ */
+
+@include all-devices('flex-row') {
+	flex-direction: row !important;
+}
+
+@include all-devices('flex-row-reverse') {
+	flex-direction: row-reverse !important;
+}
+
+@include all-devices('flex-column') {
+	flex-direction: column !important;
+}
+
+@include all-devices('flex-column-reverse') {
+	flex-direction: column-reverse !important;
+}
+
+
+
+/* --------------------------------------------------------------------------
+ * Content
+ */
+
+@include all-devices('flex-left') {
+	justify-content: flex-start !important;
+}
+
+@include all-devices('flex-center') {
+	justify-content: center !important;
+}
+
+@include all-devices('flex-right') {
+	justify-content: flex-end !important;
+}
+
+@include all-devices('flex-between') {
+	justify-content: space-between !important;
+}
+
+@include all-devices('flex-around') {
+	justify-content: space-around !important;
+}
+
+@include all-devices('flex-justify-normal') {
+	justify-content: normal !important;
+}
+
+
+
+/* --------------------------------------------------------------------------
+ * Align
+ */
+
+@include all-devices('flex-top') {
+	align-items: flex-start !important;
+}
+
+@include all-devices('flex-middle') {
+	align-items: center !important;
+}
+
+@include all-devices('flex-bottom') {
+	align-items: flex-end !important;
+}
+
+@include all-devices('flex-align-normal') {
+	align-items: normal !important;
+}
+
+
+
+/* --------------------------------------------------------------------------
+ * Wrap
+ */
+
+@include all-devices('flex-wrap') {
+	flex-wrap: wrap !important;
+}
+
+@include all-devices('flex-wrap-reverse') {
+	flex-wrap: wrap-reverse !important;
+}
+
+@include all-devices('flex-nowrap') {
+	flex-wrap: nowrap !important;
+}
+
+@include all-devices('flex-unwrap') {
+	flex-wrap: initial !important;
+}
+
+
+
+/* --------------------------------------------------------------------------
+ * Grow
+ */
+
+@include all-devices('flex-grow') {
+	flex-grow: 1 !important;
+}
+
+@include all-devices('flex-nogrow') {
+	flex-grow: 0 !important;
+}
+
+@include all-devices('flex-ungrow') {
+	flex-grow: initial !important;
+}
+
+
+
+/* --------------------------------------------------------------------------
+ * Shrink
+ */
+
+@include all-devices('flex-shrink') {
+	flex-shrink: 1 !important;
+}
+
+@include all-devices('flex-noshrink') {
+	flex-shrink: 0 !important;
+}
+
+@include all-devices('flex-unshrink') {
+	flex-shrink: initial !important;
+}

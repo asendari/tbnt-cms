@@ -1,0 +1,12 @@
+{
+    "trailingComma": "all",
+    "bracesSpacing": true,
+    "jsxBracketSameLine": false,
+    "jsxSingleQuote": false,
+    "singleQuote": true,
+    "arrowParens": "always",
+    "breakBeforeElse": true,
+    "spaceBeforeParen": false,
+    "alignObjectProperties": false,
+    "semi": true
+}

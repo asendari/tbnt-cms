@@ -1,0 +1,63 @@
+@import "~lib/css/components/base/input/checkbox.scss";
+
+.input--type-checkbox,
+.input--type-checkboxList {
+	.input--input {
+		.input-value {
+			&.input-value--checkbox {
+				display: flex;
+
+				.input-value--checkbox-input {
+					position: relative;
+					display: block;
+					width: 20px;
+					margin-right: 8px;
+
+					input {
+						position: relative;
+						z-index: 1;
+						display: inline-flex !important;
+						width: 0 !important;
+						height: 0 !important;
+						margin-left: -3px;
+						margin-right: 0;
+						opacity: .001;
+					}
+
+					&:before {
+						content: '';
+						position: absolute;
+						top: 4px; left: 0;
+						z-index: 0;
+						border: 1px solid $primary;
+						width: 16px;
+						height: 16px;
+						border-radius: 50%;
+
+						@include transition;
+					}
+				}
+
+				.input-value--checkbox-label {
+					flex: 1;
+					color: $text;
+
+					@include family;
+					@include size-13-24;
+
+					.input-value--checkbox-label-default {
+						font-size: inherit;
+					}
+				}
+
+				&.--checked {
+					.input-value--checkbox-input {
+						&:before {
+							background-color: $primary;
+						}
+					}
+				}
+			}
+		}
+	}
+}

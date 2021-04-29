@@ -1,0 +1,53 @@
+@import "~lib/css/components/base/dialog.scss";
+
+#dialog-wrapper {
+	width: 100%;
+
+	.dialog {
+		position: fixed;
+		top: 0; left: 0; right: 0; bottom: 0;
+		z-index: 900;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: $overlay-white;
+
+		.dialog--content {
+			min-width: 280px;
+			max-width: 600px;
+			background-color: $white;
+
+			@include shadow;
+
+			.dialog--message {
+				padding: 24px;
+				padding-right: 48px;
+			}
+
+			.dialog--buttons {
+				padding: 24px;
+				padding-top: 8px;
+				text-align: right;
+
+				.button {
+					margin-left: 16px;
+
+					@include cancel-margin-left;
+				}
+			}
+
+			.dialog--close {
+				position: absolute;
+				top: -6px; right: -4px;
+				z-index: 10;
+				padding: 16px;
+				cursor: pointer;
+
+				svg {
+					width: 16px;
+					height: auto;
+				}
+			}
+		}
+	}
+}

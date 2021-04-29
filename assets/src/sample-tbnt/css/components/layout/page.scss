@@ -1,0 +1,9 @@
+.page {
+	position: relative;
+	min-height: 100vh;
+	overflow: hidden;
+
+	.page--container {
+		position: relative;
+	}
+}

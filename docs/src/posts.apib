@@ -1,0 +1,28 @@
+# Group Posts
+This section groups posts resources.
+
+## List [POST /api/posts/list{?date,order,page_count}]
+List posts.
+
++ Parameters
+<!-- include(query/date.apib) -->
+    + order (enum[string], optional) - The order of the result.
+        + `visible_at-1`
+        + `visible_at-0`
+        + Default: `visible_at-1`
+<!-- include(query/page-count.apib) -->
+
++ Response 200 (application/json)
+    + Attributes (object)
+        + data (array[Post], fixed-type)
+<!-- include(query/pagination.apib) -->
+
+## Details [POST /api/posts/{post_id}]
+Get post details.
+
++ Parameters
+    + post_id (number, required) - The id of the post.
+
++ Response 200 (application/json)
+    + Attributes (object)
+        + data (Post)

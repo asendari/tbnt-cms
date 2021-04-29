@@ -1,0 +1,66 @@
+.input--type-selectMultiple {
+	.input--input {
+		padding: 2px 0px 1px !important;
+
+		.input-value {
+			& > div[class*="css-"][class*="-control"] {
+				border: none;
+				box-shadow: none;
+
+				& > div[class*="css-"] {
+					& > div[class*="css-"][class*="-multiValue"] {
+						& > div[class*="css-"] {
+							&:first-child {
+								padding: 0px;
+								padding-left: 6px;
+								padding-right: 3px;
+							}
+
+							&:last-child {
+								svg {
+									width: 13px;
+									height: 13px;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			& > div[class*="css-"][class*="-menu"] {
+				width: calc(100% + 2px);
+				margin-left: -1px;
+				margin-right: -1px;
+				border: 1px solid $gray;
+				border-radius: 2px;
+				box-shadow: none;
+
+				& > div {
+					&:not(.resize-triggers) {
+						&:first-child {
+							.ReactVirtualized__Grid {
+								.ReactVirtualized__Grid__innerScrollContainer {
+									.flat-virtualized-item {
+										& > div {
+											width: calc(100% - 2px);
+
+											.fast-option {
+												&.fast-option-focused {
+
+												}
+
+												&.fast-option-selected {
+
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

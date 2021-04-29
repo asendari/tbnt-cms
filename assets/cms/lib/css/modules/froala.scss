@@ -1,0 +1,12 @@
+/**
+ * @name froala
+ * @description Froala module css for ReactJS personal library
+ * @file SCSS Froala module
+ *
+ * @version 1.0.0 - 2019-11-28
+ * @author Alexandre Pilloud
+ */
+
+[data-f-id] {
+	@include none;
+}

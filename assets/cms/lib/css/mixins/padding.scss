@@ -1,0 +1,61 @@
+/**
+ * @name padding
+ * @description Padding mixins scss for ReactJS personal library
+ * @file SCSS Padding mixins
+ *
+ * @version 1.0.0 - 2019-11-28
+ * @author Alexandre Pilloud
+ */
+
+/* --------------------------------------------------------------------------
+ * Padding
+ */
+
+$padding-max: 200px !default;
+$padding-increment: 8px !default;
+
+@mixin padding-gen ($side: '') {
+	@for $i from 0 through ($padding-max / $padding-increment) {
+		$padding-calc: $padding-increment * $i;
+		$padding-name: 'padding-' + strip-unit($padding-calc);
+
+		@if ($side == '') {
+			@include all-devices($padding-name) {
+				padding: $padding-calc !important;
+			}
+		}
+		@else {
+			@include all-devices(#{$padding-name}-#{$side}) {
+				padding-#{$side}: $padding-calc !important;
+			}
+		}
+	}
+}
+
+@mixin cancel-padding($padding: 0) {
+	@include cancel-padding-top($padding);
+	@include cancel-padding-left($padding);
+	@include cancel-padding-right($padding);
+	@include cancel-padding-bottom($padding);
+}
+
+@mixin cancel-padding-top($padding: 0) {
+	@include _cancel-padding(first-child, padding-top, $padding);
+}
+
+@mixin cancel-padding-left($padding: 0) {
+	@include _cancel-padding(first-child, padding-left, $padding);
+}
+
+@mixin cancel-padding-right($padding: 0) {
+	@include _cancel-padding(last-child, padding-right, $padding);
+}
+
+@mixin cancel-padding-bottom($padding: 0) {
+	@include _cancel-padding(last-child, padding-bottom, $padding);
+}
+
+@mixin _cancel-padding($cancel, $side, $padding: 0) {
+	@if ($padding != 0) { #{$side}: $padding; }
+	&:#{$cancel} { #{$side}: 0; }
+}

@@ -1,0 +1,15 @@
+/**
+ * @name rows
+ * @description Rows base css for ReactJS personal library
+ * @file SCSS Rows Component
+ *
+ * @version 1.0.0 - 2019-11-28
+ * @author Alexandre Pilloud
+ */
+
+.rows {
+	.rows--row {
+		display: flex;
+		align-items: center;
+	}
+}

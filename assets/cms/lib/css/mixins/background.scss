@@ -1,0 +1,30 @@
+/**
+ * @name background
+ * @description Background mixins scss for ReactJS personal library
+ * @file SCSS Background mixins
+ *
+ * @version 1.0.0 - 2019-11-28
+ * @author Alexandre Pilloud
+ */
+
+@mixin background-cover($image: '') {
+	@include background-image($image);
+
+	background-size: cover;
+}
+
+@mixin background-contain($image: '') {
+	@include background-image($image);
+
+	background-size: contain;
+}
+
+@mixin background-image($image: '') {
+	@if ($image != '') {
+		background-image: url($image);
+	}
+
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+}

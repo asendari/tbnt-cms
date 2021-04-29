@@ -1,0 +1,27 @@
+/**
+ * @name mosaic
+ * @description Mosaic base css for ReactJS personal library
+ * @file SCSS Mosaic Component
+ *
+ * @version 1.0.0 - 2019-11-28
+ * @author Alexandre Pilloud
+ */
+
+.mosaic {
+	column-fill: auto;
+	column-width: auto;
+	column-count: 1;
+
+	.mosaic--content {
+		list-style: none;
+
+		.mosaic--item {
+			display: initial;
+			width: 100%;
+
+			@include detect-safari {
+				display: inline-block;
+			}
+		}
+	}
+}

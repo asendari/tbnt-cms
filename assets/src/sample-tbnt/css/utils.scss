@@ -1,0 +1,190 @@
+/* --------------------------------------------------------------------------
+ * Colors
+ */
+
+$colors: (
+	primary: $primary,
+	secondary: $secondary,
+	tertiary: $tertiary,
+	success: $success,
+	info: $info,
+	warning: $warning,
+	danger: $danger,
+	blue: $blue,
+	green: $green,
+	orange: $orange,
+	red: $red,
+	white: $white,
+	black: $black,
+	overlay-white: $overlay-white,
+	overlay-black: $overlay-black,
+	muted: $gray,
+	muted-light: $gray-light,
+	muted-lighter: $gray-lighter,
+	color: $text-color,
+);
+
+@mixin colors-gen ($prefix, $property) {
+	@each $name, $color in ($colors) {
+		@include all-devices($prefix + '-' + $name) { #{$property}: $color !important; }
+	}
+}
+
+@include colors-gen('bg', background-color);
+@include colors-gen('border', border-color);
+@include colors-gen('text', color);
+
+
+
+/* --------------------------------------------------------------------------
+ * Typography
+ */
+
+@include all-devices('family') { @include family; }
+@include all-devices('family-alt') { @include family-alt; }
+
+@include all-devices('font-extralight') { font-weight: $font-weight-extralight !important; }
+@include all-devices('font-light') { font-weight: $font-weight-light !important; }
+@include all-devices('font-regular') { font-weight: $font-weight-regular !important; }
+@include all-devices('font-medium') { font-weight: $font-weight-medium !important; }
+@include all-devices('font-semibold') { font-weight: $font-weight-semibold !important; }
+@include all-devices('font-bold') { font-weight: $font-weight-bold !important; }
+@include all-devices('font-extrabold') { font-weight: $font-weight-extrabold !important; }
+@include all-devices('font-black') { font-weight: $font-weight-black !important; }
+
+@include all-devices('italic') { font-style: italic !important; }
+@include all-devices('uppercase') { text-transform: uppercase !important; }
+@include all-devices('line-break') { white-space: pre-wrap !important; }
+@include all-devices('no-line-break') { white-space: nowrap !important; }
+
+@include all-devices('truncate') { @include truncate; }
+@include all-devices('underline') { text-decoration: underline !important; }
+@include all-devices('no-underline') { text-decoration: none !important; }
+@include all-devices('underlined') { border-bottom: 1px solid $black; }
+
+@include all-devices('text-opacity') { opacity: .5 !important; }
+@include all-devices('text-opacity-hover') { opacity: .5 !important; &:hover { opacity: 1 !important; } }
+
+@include all-devices('text-left') { text-align: left; }
+@include all-devices('text-right') { text-align: right; }
+
+
+
+/* --------------------------------------------------------------------------
+ * Positions
+ */
+
+@include all-devices('relative') { position: relative; }
+@include all-devices('absolute') { position: absolute; }
+@include all-devices('fixed') { position: fixed; }
+@include all-devices('z-index') { z-index: 1; }
+
+
+
+/* --------------------------------------------------------------------------
+ * Margin
+ */
+
+@include all-devices('cancel-margin-top') { &:last-child { margin-top: 0 !important; } }
+@include all-devices('cancel-margin-left') { &:last-child { margin-left: 0 !important; } }
+@include all-devices('cancel-margin-right') { &:last-child { margin-right: 0 !important; } }
+@include all-devices('cancel-margin-bottom') { &:last-child { margin-bottom: 0 !important; } }
+
+
+
+/* --------------------------------------------------------------------------
+ * Padding
+ */
+
+@include all-devices('cancel-padding-top') { &:last-child { padding-top: 0 !important; } }
+@include all-devices('cancel-padding-left') { &:last-child { padding-left: 0 !important; } }
+@include all-devices('cancel-padding-right') { &:last-child { padding-right: 0 !important; } }
+@include all-devices('cancel-padding-bottom') { &:last-child { padding-bottom: 0 !important; } }
+
+
+
+/* --------------------------------------------------------------------------
+ * Border
+ */
+
+@include all-devices('border') { border-width: 1px !important; border-style: solid !important; }
+@include all-devices('border-top') { border-top-width: 1px !important; border-top-style: solid !important; }
+@include all-devices('border-left') { border-left-width: 1px !important; border-left-style: solid !important; }
+@include all-devices('border-right') { border-right-width: 1px !important; border-right-style: solid !important; }
+@include all-devices('border-bottom') { border-bottom-width: 1px !important; border-bottom-style: solid !important; }
+
+
+
+/* --------------------------------------------------------------------------
+ * Misc
+ */
+
+@include all-devices('pointer-none') { pointer-events: none !important; touch-action: none !important; }
+@include all-devices('pointer-all') { pointer-events: all !important; touch-action: auto !important; }
+@include all-devices('pointer') { cursor: pointer; }
+@include all-devices('grab') { cursor: grab; }
+
+
+
+/* --------------------------------------------------------------------------
+ * Radius
+ */
+
+@include all-devices('radius') { border-radius: 4px !important; }
+@include all-devices('radius-50') { border-radius: 50% !important; }
+
+
+
+/* --------------------------------------------------------------------------
+ * Shadow
+ */
+
+.shadow { @include shadow; }
+.shadow-large { @include shadow-large; }
+
+.text-shadow { @include text-shadow; }
+.text-shadow-large { @include text-shadow-large; }
+
+.svg-shadow { @include filter-shadow; }
+.svg-shadow-large { @include filter-shadow-large; }
+
+
+
+/* --------------------------------------------------------------------------
+ * Transition
+ */
+
+.transition { @include transition; }
+.transition-slow { @include transition-slow; }
+
+
+
+/* --------------------------------------------------------------------------
+ * Margin
+ */
+
+.margin-content-top {
+	@include mobile { margin-top: 32px; }
+	@include tablet-only { margin-top: 64px; }
+	@include desktop { margin-top: 128px; }
+}
+
+.margin-content-bottom {
+	@include touch { margin-bottom: 64px; }
+	@include desktop { margin-bottom: 128px; }
+}
+
+.margin-title {
+	@include touch { padding-bottom: 32px; }
+	@include desktop { padding-bottom: 80px; }
+}
+
+.padding-content-top {
+	@include touch { padding-top: 64px; }
+	@include desktop { padding-top: 128px; }
+}
+
+.padding-content-bottom {
+	@include touch { padding-bottom: 32px; }
+	@include desktop { padding-bottom: 80px; }
+}

@@ -1,0 +1,59 @@
+.sidebar {
+	position: fixed;
+	top: 0;
+	width: inherit;
+	height: 100vh;
+	background-color: $dark;
+	color: $white;
+	overflow-y: auto;
+
+	.sidebar--title {
+		display: flex;
+		padding: 22px 0 21px 24px;
+		align-items: center;
+		border-bottom: 1px solid rgba(255, 255, 255, .1);
+		color: $white;
+
+		@include strong;
+		@include size-19-28;
+	}
+
+	.sidebar--links {
+		.link {
+			display: flex;
+			padding: 16px 24px;
+			color: $white;
+
+			@include transition;
+
+			&:hover,
+			&.--active {
+				background-color: rgba(0, 0, 0, .1);
+			}
+		}
+
+		.minifiable {
+			.minifiable--title {
+				span {
+					display: flex;
+					padding: 16px 24px;
+					color: $white;
+					cursor: pointer;
+
+					@include transition;
+
+					&:hover,
+					&.--active {
+						background-color: rgba(0, 0, 0, .1);
+					}
+				}
+			}
+
+			.minifiable--content {
+				.link {
+					padding-left: 48px;
+				}
+			}
+		}
+	}
+}

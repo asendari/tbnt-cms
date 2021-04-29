@@ -1,0 +1,13 @@
+@import "~lib/css/components/base/video.scss";
+
+.video {
+	max-height: $breakpoint-widescreen * .5625;
+
+	&:before {
+		max-height: $breakpoint-widescreen * .5625;
+	}
+
+	@include touch {
+		overflow: visible !important;
+	}
+}

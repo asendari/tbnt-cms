@@ -1,0 +1,130 @@
+.input--type-selectMultiple {
+	.input--input {
+		padding: 12px 0px !important;
+
+		.input-value {
+			.Select-control {
+				display: flex;
+				height: initial;
+				min-height: 31px;
+				margin-left: -5px;
+				margin-bottom: -5px;
+				padding-left: 16px;
+				overflow: visible;
+				background-color: transparent;
+				border: none;
+				border-radius: 0;
+				box-shadow: none !important;
+
+				.Select-multi-value-wrapper {
+					position: relative;
+					flex: 1;
+					display: flex;
+					flex-wrap: wrap;
+
+					.Select-placeholder {
+						padding-left: 5px;
+						padding-right: 5px;
+						line-height: 27px;
+					}
+
+					.Select-value {
+						display: inline-flex;
+						align-items: center;
+						margin-top: 0;
+						margin-bottom: 5px;
+						line-height: 24px;
+						color: $primary;
+
+						.Select-value-icon {
+							color: inherit;
+							padding: 0 5px;
+							line-height: 1.1;
+
+							&:hover {
+								color: $warning;
+								background-color: transparent;
+							}
+						}
+
+						.Select-value-label {
+							padding: 0 5px;
+							line-height: 1;
+							color: inherit;
+
+							@include size-p-small;
+						}
+					}
+
+					.Select-input {
+						height: initial;
+						margin-left: 5px;
+
+						input {
+							height: 100%;
+							padding: 0;
+							padding-bottom: 5px;
+							line-height: 17px !important;
+							box-sizing: border-box !important;
+						}
+					}
+				}
+
+				.Select-clear-zone {
+					display: inline-flex;
+					justify-content: center;
+					align-items: center;
+					padding-bottom: 3px;
+
+					.Select-clear {
+						line-height: 1;
+					}
+
+					&:hover {
+						.Select-clear {
+							color: $warning;
+						}
+					}
+				}
+
+				.Select-arrow-zone {
+					display: inline-flex;
+					justify-content: center;
+					align-items: center;
+					margin-right: -1px;
+					padding-right: 0;
+					padding-bottom: 1px;
+				}
+			}
+
+			.Select-menu-outer {
+				width: calc(100% + 2px);
+				margin-left: -1px;
+				margin-right: -1px;
+				border-color: $border;
+
+				.Select-menu {
+					&:not(.resize-triggers) {
+						.VirtualSelectGrid {
+							& > div {
+								.VirtualizedSelectOption {
+									&.VirtualizedSelectFocusedOption {
+										color: $primary !important;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			&.is-focused {
+				.Select-control {
+					background: transparent !important;
+					border: none !important;
+					box-shadow: none !important;
+				}
+			}
+		}
+	}
+}

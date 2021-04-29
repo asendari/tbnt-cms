@@ -1,0 +1,155 @@
+/**
+ * @name datetime
+ * @description Datetime base css for ReactJS personal library
+ * @file SCSS Datetime Input Component
+ *
+ * @version 1.0.1 - 2020-09-24
+ * @author Alexandre Pilloud
+ */
+
+@import "~flatpickr/dist/flatpickr.min.css";
+@import "~flatpickr/dist/ie.css";
+
+.input--type-date,
+.input--type-datetime,
+.input--type-time {
+    .input--input {
+        position: relative;
+
+        .input-clear {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            display: inline-flex;
+            align-items: center;
+            padding: 12px;
+            cursor: pointer;
+        }
+    }
+}
+
+.input-value--date {
+
+}
+
+.input-value--datetime {
+
+}
+
+.input-value--time {
+
+}
+
+.flatpickr-calendar {
+    &:before,
+    &:after {
+
+    }
+
+    .flatpickr-months {
+        .flatpickr-prev-month,
+        .flatpickr-next-month {
+            svg {
+
+            }
+        }
+
+        .flatpickr-prev-month {
+            svg {
+
+            }
+        }
+
+        .flatpickr-next-month {
+            svg {
+
+            }
+        }
+
+        .flatpickr-month {
+            .flatpickr-current-month {
+                .cur-month {
+
+                }
+
+                .numInputWrapper {
+                    .cur-year {
+
+                    }
+
+                    .arrowUp {
+                        &:after{
+
+                        }
+                    }
+
+                    .arrowDown {
+                        &:after{
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .flatpickr-innerContainer {
+        .flatpickr-weekday {
+
+        }
+
+        .flatpickr-day {
+
+        }
+
+        .flatpickr-weekwrapper {
+            .flatpickr-weekday {
+
+            }
+
+            .flatpickr-weeks {
+                .flatpickr-day {
+
+                }
+            }
+        }
+
+        .flatpickr-rContainer {
+            .flatpickr-weekdays {
+                .flatpickr-weekdaycontainer {
+                    .flatpickr-weekday {
+
+                    }
+                }
+            }
+
+            .flatpickr-days {
+                .dayContainer {
+                    .flatpickr-day {
+                        &.prevMonthDay,
+                        &.nextMonthDay {
+
+                        }
+
+                        &.prevMonthDay {
+
+                        }
+
+                        &.nextMonthDay {
+
+                        }
+
+                        &.today {
+
+                        }
+
+                        &.selected {
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

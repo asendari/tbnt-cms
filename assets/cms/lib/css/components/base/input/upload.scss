@@ -1,0 +1,62 @@
+/**
+ * @name upload
+ * @description Upload base css for ReactJS personal library
+ * @file SCSS Upload Input Component
+ *
+ * @version 1.0.0 - 2019-11-28
+ * @author Alexandre Pilloud
+ */
+
+.input-value--upload {
+	.input-value--upload-value {
+		.input-value--upload-input {
+			.input-value {
+
+			}
+
+			span {
+
+			}
+		}
+
+		.input-value--upload-delete {
+			span {
+
+			}
+		}
+	}
+
+	.input-value--upload-preview {
+		.input-value--upload-preview-image {
+			img {
+				width: 100%;
+				max-width: 100%;
+			}
+		}
+
+		.input-value--upload-preview-embed {
+			.embed {
+				width: 100%;
+				max-width: 100%;
+			}
+		}
+
+		.input-value--upload-preview-name {
+			span {
+
+			}
+		}
+
+		.input-value--upload-preview-link {
+			span {
+
+			}
+		}
+
+		.input-value--upload-no-file {
+			span {
+
+			}
+		}
+	}
+}

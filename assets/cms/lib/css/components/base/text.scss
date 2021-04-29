@@ -1,0 +1,20 @@
+/**
+ * @name text
+ * @description Text base css for ReactJS personal library
+ * @file SCSS Text Component
+ *
+ * @version 1.0.0 - 2019-11-28
+ * @author Alexandre Pilloud
+ */
+
+.text {
+	color: inherit;
+
+	.emoji {
+		display: inline;
+		height: 1em;
+		width: 1em;
+		margin: 0;
+		vertical-align: -0.1em;
+	}
+}

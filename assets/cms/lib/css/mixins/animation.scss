@@ -1,0 +1,35 @@
+/**
+ * @name animation
+ * @description animation mixins scss for ReactJS personal library
+ * @file SCSS animation mixins
+ *
+ * As is often the case, some devices/browsers need additional code to get CSS to work
+ * in the most desired way. These mixins are used to quickly drop in hacks for each element
+ * Find out more here: https://github.com/IanLunn/Hover/wiki/Hacks-Explained
+ *
+ * @version 1.0.0 - 2019-11-28
+ * @author Alexandre Pilloud
+ */
+
+@mixin hardware-accel() {
+	transform: perspective(1px) translateZ(0);
+}
+
+@mixin improve-anti-alias() {
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+@mixin force-block-level() {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+@mixin hacks-2() {
+	@include hardware-accel();
+	@include improve-anti-alias();
+}
+
+@mixin hacks-1() {
+	@include hacks-2();
+	@include force-block-level();
+}

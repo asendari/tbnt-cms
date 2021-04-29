@@ -1,0 +1,17 @@
+@import "~lib/css/components/base/label.scss";
+
+.label {
+	display: inline-block;
+	padding: 6px 12px;
+	color: $white;
+	border-radius: 0;
+	font-weight: $font-weight-bold;
+
+	&.--black {
+		background-color: $black;
+	}
+
+	&.--primary {
+		background-color: $primary;
+	}
+}

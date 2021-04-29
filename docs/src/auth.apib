@@ -1,0 +1,62 @@
+# Group Auth
+This section groups auth resources.
+
+## Login [POST /api/auth/login]
+Log in user.
+
++ Request login (application/json)
+    + Attributes (object)
+        + email: `test@test.test` (string) - User email
+        + password: `password` (string) - User password
+
++ Response 200 (application/json)
+    + Attributes (Token)
+
+## Signin [POST /api/auth/signin]
+Create user.
+
++ Request signin (application/json)
+    + Attributes (object)
+        + email: `test@test.test` (string) - User email
+        + password: `password` (string) - User password
+
++ Response 200 (application/json)
+    + Attributes (Token)
+
+## Refresh token [GET /api/auth/refresh-token]
+Refresh user token.
+
++ Response 200 (application/json)
+    + Attributes (Token)
+
+## Forgot password [POST /api/auth/forgot-password]
+Send an email with a password recovery link.
+
++ Request forgot password (application/json)
+    + Attributes (object)
+        + email: `test@test.test` (string) - User email
+
++ Response 200 (application/json)
+
+        Empty
+
+## Recover password [POST /api/auth/recover-password]
+Reset user password.
+
++ Request recover password (application/json)
+    + Attributes (object)
+        + email: `test@test.test` (string) - User email
+        + password: `password` (string) - User password
+        + password_confirmation: `password` (string) - Password confirmation
+        + token: `abcd` (string) - Recover password token
+
++ Response 200 (application/json)
+
+        Empty
+
+## Logout [GET /api/auth/logout]
+Log out user.
+
++ Response 200 (application/json)
+
+        Empty

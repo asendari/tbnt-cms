@@ -1,0 +1,180 @@
+@mixin family() {
+	font-family: $font-family;
+}
+
+@mixin family-alt() {
+	font-family: $font-family-alt;
+}
+
+@mixin size-13-13() {
+	font-size: 13px;
+	line-height: 13px;
+}
+
+@mixin size-84-84() {
+	font-size: 84px;
+	line-height: 84px;
+}
+
+@mixin size-h1() {
+	@include size-84-84;
+
+	@include touch {
+		@include size-84-84;
+	}
+}
+
+@mixin size-h2() {
+	@include size-84-84;
+
+	@include touch {
+		@include size-84-84;
+	}
+}
+
+@mixin size-h3() {
+	@include size-84-84;
+
+	@include touch {
+		@include size-84-84;
+	}
+}
+
+@mixin size-h4() {
+	@include size-13-13;
+
+	@include touch {
+		@include size-13-13;
+	}
+}
+
+@mixin size-p() {
+	@include size-13-13;
+
+	@include touch {
+		@include size-13-13;
+	}
+}
+
+@mixin size-p-small() {
+	@include size-13-13;
+
+	@include touch {
+		@include size-13-13;
+	}
+}
+
+@mixin size-figure() {
+	@include size-13-13;
+
+	@include touch {
+		@include size-13-13;
+	}
+}
+
+@mixin size-label() {
+	@include size-13-13;
+
+	@include touch {
+		@include size-13-13;
+	}
+}
+
+@mixin typo-spacing() {
+	letter-spacing: 1px;
+}
+
+@mixin typo-strong() {
+	font-weight: $font-weight-regular;
+}
+
+@mixin typo-mark() {
+	padding: .2em;
+	background-color: $orange;
+}
+
+@mixin typo-del() {
+	text-decoration: line-through;
+}
+
+@mixin typo-underline() {
+	text-decoration: underline;
+}
+
+@mixin typo-small() {
+	font-size: 80%;
+}
+
+@mixin typo-selection() {
+	background: rgba($primary, .4);
+	color: $white;
+}
+
+@mixin typo-title() {
+	font-weight: $font-weight-regular;
+	color: $text-color;
+
+	@include family;
+}
+
+@mixin typo-h1() {
+	@include typo-title;
+	@include size-h1;
+}
+
+@mixin typo-h2() {
+	@include typo-title;
+	@include size-h2;
+}
+
+@mixin typo-h3() {
+	@include typo-title;
+	@include size-h3;
+}
+
+@mixin typo-h4() {
+	@include typo-title;
+	@include size-h4;
+}
+
+@mixin typo-text() {
+	font-weight: $font-weight-light;
+	color: $text-color;
+
+	@include family;
+}
+
+@mixin typo-p() {
+	@include typo-text;
+	@include size-p;
+}
+
+@mixin typo-a() {
+	font-weight: $font-weight-semibold;
+	color: $primary;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: .1rem;
+
+	@include family;
+
+	&.--not-link {
+		font-weight: inherit;
+		color: inherit;
+	}
+}
+
+@mixin typo-input() {
+	@include typo-text;
+	@include size-p-small;
+
+	@include detect-ie-edge {
+		line-height: 1;
+	}
+}
+
+@mixin typo-placeholder() {
+	@include typo-input;
+
+	opacity: .5 !important;
+}

@@ -1,0 +1,29 @@
+/**
+ * @name typography
+ * @description Typography mixins scss for ReactJS personal library
+ * @file SCSS Typography mixins
+ *
+ * @version 1.0.0 - 2019-11-28
+ * @author Alexandre Pilloud
+ */
+
+/* --------------------------------------------------------------------------
+ * Typography
+ */
+
+@mixin font-size-rem($size) {
+	font-size: $size;
+	font-size: calculate-rem($size);
+}
+
+@mixin line-height-rem($size) {
+	line-height: $size;
+	line-height: calculate-rem($size);
+}
+
+@mixin truncate {
+	width: auto;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}

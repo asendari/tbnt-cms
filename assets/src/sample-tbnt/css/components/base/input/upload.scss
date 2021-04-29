@@ -1,0 +1,115 @@
+@import "~lib/css/components/base/input/upload.scss";
+
+.input--type-upload {
+	.input--input {
+		padding: 0 !important;
+
+		.input-value {
+			position: relative;
+
+			.input-value--upload-value {
+				.input-value--upload-input {
+					position: relative;
+
+					::placeholder {
+						cursor: pointer;
+					}
+
+					::-webkit-file-upload-button {
+						cursor: pointer;
+					}
+
+					.input-value {
+						position: absolute;
+						top: 0; left: 0; right: 0; bottom: 0;
+						z-index: 1;
+						opacity: .001;
+						overflow: hidden;
+						cursor: pointer;
+					}
+				}
+
+				.input-value--upload-delete {
+					position: absolute;
+					top: 0; right: 0; bottom: 0;
+					z-index: 2;
+					display: flex;
+					align-items: center;
+					padding: 0 20px;
+					background-color: white;
+					border-radius: 4px;
+					cursor: pointer;
+				}
+			}
+
+			.input-value--upload-preview {
+				.input-value--upload-preview-name {
+					position: absolute;
+					top: 0; left: 0; right: 0; bottom: 0;
+					z-index: 1;
+					padding-right: 50px;
+					background-color: white;
+					border-radius: 4px;
+
+					span {
+						color: $text-color;
+					}
+				}
+
+				.input-value--upload-no-file {
+					display: none;
+				}
+			}
+
+			.upload-input {
+				display: flex;
+				align-items: center;
+
+				.upload-placeholder {
+					flex: 1;
+					display: flex;
+					align-items: center;
+					height: 100%;
+					padding: 14px 16px;
+					border-right: 1px solid rgba($black, .2);
+
+					span {
+						opacity: .5;
+
+						@include typo-input;
+					}
+				}
+
+				.upload-icon {
+					padding: 0 20px;
+
+					svg {
+						width: 10px;
+						height: 7px;
+					}
+				}
+			}
+
+			.upload-remove {
+				svg {
+					width: 10px;
+					height: 10px;
+				}
+			}
+
+			.upload-file {
+				display: flex;
+				align-items: center;
+				height: 100%;
+				padding: 14px 16px;
+				border-right: 1px solid rgba($black, .2);
+
+				span {
+					display: block;
+
+					@include truncate;
+				}
+			}
+		}
+	}
+}

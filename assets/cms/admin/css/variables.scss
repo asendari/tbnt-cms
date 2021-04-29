@@ -1,0 +1,195 @@
+/* --------------------------------------------------------------------------
+ * Miscellaneous
+ */
+
+$easing: ease-out;
+
+$radius-small: 2px;
+$radius: 3px;
+$radius-large: 5px;
+
+$opacity-darker: 0.9;
+$opacity-dark: 0.8;
+$opacity: 0.5;
+$opacity-light: 0.4;
+$opacity-lighter: 0.1;
+
+
+
+/* --------------------------------------------------------------------------
+ * Colors
+ */
+
+$green: #46be8a;
+$blue: #48b0f7;
+$orange: #f2a654;
+$red: #f96868;
+$purple: #926dde;
+$pink: #f96197;
+$cyan: #57c7d4;
+$yellow: #fdd501;
+$brown: #8d6658;
+$dark: #465161;
+
+$primary: #33cabb;
+$secondary: #e4e7ea;
+$success: $green;
+$info: $blue;
+$warning: $orange;
+$danger: $red;
+
+$green-extra: #e3fcf2;
+$blue-extra: #e3f3fc;
+$orange-extra: #fcf0e3;
+$red-extra: #fce3e3;
+$purple-extra: #ece3fc;
+$pink-extra: #fce3ec;
+$cyan-extra: #e3fafc;
+$yellow-extra: #fcf8e3;
+$brown-extra: #eddcd5;
+$dark-extra: #c8c8c8;
+
+$primary-extra: #dcfcfa;
+$secondary-extra: #f7fafc;
+$success-extra: $green-extra;
+$info-extra: $blue-extra;
+$warning-extra: $orange-extra;
+$danger-extra: $red-extra;
+
+$text-title: #37404d;
+$text: #616a78;
+$text-light: #788394;
+$text-secondary: #929daf;
+$text-disabled: #a5b3c7;
+$text-gray: #8b95a5;
+
+$gray: #ceced6;
+$gray-muted: #4d5259;
+$gray-light: #f5f6f7;
+$gray-lighter: #f9fafb;
+$gray-lightest: #fcfdfe;
+
+$divider: #ebebeb;
+$divider-light: #f1f2f3;
+
+$black: #191919;
+$white: #ffffff;
+$background: $gray-light;
+
+$overlay-black: rgba($black, .6);
+$overlay-white: rgba($white, .6);
+
+
+
+/* --------------------------------------------------------------------------
+ * Typography
+ */
+
+$font-family: 'Nunito', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+$font-weight-extralight: 200;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+$font-weight-black: 900;
+
+
+
+/* --------------------------------------------------------------------------
+ * Paddings
+ */
+
+$padding-max: 240px;
+
+
+
+/* --------------------------------------------------------------------------
+ * Margins
+ */
+
+$margin-max: 240px;
+
+
+
+/* --------------------------------------------------------------------------
+ * Breakpoints
+ */
+
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+$breakpoint-desktop-13: 1153px;
+$breakpoint-widescreen: 1440px;
+
+
+
+/* --------------------------------------------------------------------------
+ * Export
+ */
+
+:export {
+	green: $green;
+	blue: $blue;
+	orange: $orange;
+	red: $red;
+	purple: $purple;
+	pink: $pink;
+	cyan: $cyan;
+	yellow: $yellow;
+	brown: $brown;
+	dark: $dark;
+
+	primary: $primary;
+	secondary: $secondary;
+	success: $success;
+	info: $info;
+	warning: $warning;
+	danger: $danger;
+
+	greenExtra: $green-extra;
+	blueExtra: $blue-extra;
+	orangeExtra: $orange-extra;
+	redExtra: $red-extra;
+	purpleExtra: $purple-extra;
+	pinkExtra: $pink-extra;
+	cyanExtra: $cyan-extra;
+	yellowExtra: $yellow-extra;
+	brownExtra: $brown-extra;
+	darkExtra: $dark-extra;
+
+	primaryExtra: $primary-extra;
+	secondaryExtra: $secondary-extra;
+	successExtra: $success-extra;
+	infoExtra: $info-extra;
+	warningExtra: $warning-extra;
+	dangerExtra: $danger-extra;
+
+	textTitle: $text-title;
+	text: $text;
+	textLight: $text-light;
+	textSecondary: $text-secondary;
+	textDisabled: $text-disabled;
+	textGray: $text-gray;
+
+	gray: $gray;
+	grayMuted: $gray-muted;
+	grayLight: $gray-light;
+	grayLighter: $gray-lighter;
+	grayLightest: $gray-lightest;
+
+	divider: $divider;
+	dividerLight: $divider-light;
+
+	black: $black;
+	white: $white;
+	background: $background;
+
+	overlayBlack: $overlay-black;
+	overlayWhite: $overlay-white;
+
+	breakpointTablet: $breakpoint-tablet;
+	breakpointDesktop: $breakpoint-desktop;
+	breakpointWidescreen: $breakpoint-widescreen;
+}

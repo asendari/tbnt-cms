@@ -1,0 +1,22 @@
+/**
+ * @name radio
+ * @description Radio base css for ReactJS personal library
+ * @file SCSS Radio Input Component
+ *
+ * @version 1.0.0 - 2019-11-28
+ * @author Alexandre Pilloud
+ */
+
+.input-value--radio {
+	display: inline-flex;
+	flex-wrap: wrap;
+	cursor: pointer;
+
+	input {
+		margin-right: 16px;
+
+		&:checked {
+			background-image: none !important;
+		}
+	}
+}

@@ -1,0 +1,104 @@
+/**
+ * @name breakpoint
+ * @description Breakpoint mixins scss for ReactJS personal library
+ * @file SCSS Breakpoint mixins
+ *
+ * @version 1.0.0 - 2019-11-28
+ * @author Alexandre Pilloud
+ */
+
+$breakpoint-tablet: 768px !default;
+$breakpoint-desktop: 1024px !default;
+$breakpoint-desktop-13: 1153px !default;
+$breakpoint-widescreen: 1440px !default;
+
+// Max mobile
+@mixin mobile() {
+	@media (max-width: $breakpoint-tablet - 1px) {
+		@content;
+	}
+}
+
+// Min tablet
+@mixin tablet() {
+	@media (min-width: $breakpoint-tablet) {
+		@content;
+	}
+}
+
+// Only tablet
+@mixin tablet-only() {
+	@media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop - 1px) {
+		@content;
+	}
+}
+
+// Max tablet
+@mixin touch() {
+	@media (max-width: $breakpoint-desktop - 1px) {
+		@content;
+	}
+}
+
+// Min Desktop
+@mixin desktop() {
+	@media (min-width: $breakpoint-desktop) {
+		@content;
+	}
+}
+
+// Max desktop
+@mixin desktop-max() {
+	@media (max-width: $breakpoint-widescreen - 1px) {
+		@content;
+	}
+}
+
+// Only desktop
+@mixin desktop-only() {
+	@media (min-width: $breakpoint-desktop) and (max-width: $breakpoint-widescreen - 1px) {
+		@content;
+	}
+}
+
+// Max desktop 11
+@mixin desktop-11-max() {
+	@media (max-width: $breakpoint-desktop-13 - 1px) {
+		@content;
+	}
+}
+
+// Only desktop 11
+@mixin desktop-11-only() {
+	@media (min-width: $breakpoint-desktop) and (max-width: $breakpoint-desktop-13 - 1px) {
+		@content;
+	}
+}
+
+// Only tablet and desktop 11
+@mixin tablet-desktop-11-only() {
+	@media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop-13 - 1px) {
+		@content;
+	}
+}
+
+// Min desktop 13
+@mixin desktop-13() {
+	@media (min-width: $breakpoint-desktop-13) {
+		@content;
+	}
+}
+
+// Only desktop 13
+@mixin desktop-13-only() {
+	@media (min-width: $breakpoint-desktop-13) and (max-width: $breakpoint-widescreen - 1px) {
+		@content;
+	}
+}
+
+// Min widescreen
+@mixin widescreen() {
+	@media (min-width: $breakpoint-widescreen) {
+		@content;
+	}
+}

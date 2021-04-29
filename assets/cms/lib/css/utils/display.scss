@@ -1,0 +1,44 @@
+/**
+ * @name display
+ * @description Display utils css for ReactJS personal library
+ * @file SCSS Display utils
+ *
+ * @version 1.0.0 - 2019-11-28
+ * @author Alexandre Pilloud
+ */
+
+@include all-devices('flex') {
+	display: flex !important;
+}
+
+@include all-devices('inline-flex') {
+	display: inline-flex !important;
+}
+
+@include all-devices('block') {
+	display: block !important;
+}
+
+@include all-devices('inline-block') {
+	display: inline-block !important;
+}
+
+@include all-devices('inline') {
+	display: inline !important;
+}
+
+@include all-devices('pointer-none') {
+	@include pointer-none;
+}
+
+@include all-devices('hidden') {
+	@include hidden;
+}
+
+@include all-devices('none') {
+	@include none;
+}
+
+@include all-devices('border-none') {
+	border: none !important;
+}

@@ -1,0 +1,36 @@
+.header {
+	position: relative;
+	flex-direction: column;
+	padding: 24px;
+	background-color: $white;
+
+	.header--title {
+		padding: 24px 0 24px;
+	}
+
+	.header--languages {
+		position: absolute;
+		right: 0; bottom: 0;
+		padding: 16px 16px 8px;
+
+		span {
+			padding: 8px;
+			cursor: pointer;
+			opacity: .3;
+
+			&.--active {
+				opacity: 1;
+			}
+
+			img {
+				width: 24px;
+				height: auto;
+			}
+		}
+	}
+
+	.tabs {
+		margin-top: 24px;
+		margin-bottom: -24px;
+	}
+}

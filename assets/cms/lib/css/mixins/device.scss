@@ -1,0 +1,66 @@
+/**
+ * @name device
+ * @description Device mixins scss for ReactJS personal library
+ * @file SCSS Device mixins
+ *
+ * @version 1.0.0 - 2019-11-28
+ * @author Alexandre Pilloud
+ */
+
+@mixin all-devices ($name) {
+	$sel: '.';
+
+	@if & {
+		$sel: & + $sel;
+	}
+
+	@at-root #{$sel + $name} { @content; }
+	@at-root #{$sel + $name}\@s { @include mobile { @content; } }
+	@at-root #{$sel + $name}\@t { @include tablet { @content; } }
+	@at-root #{$sel + $name}\@t-o { @include tablet-only { @content; } }
+	@at-root #{$sel + $name}\@m { @include touch { @content; } }
+	@at-root #{$sel + $name}\@d { @include desktop { @content; } }
+	@at-root #{$sel + $name}\@d-m { @include desktop-max { @content; } }
+	@at-root #{$sel + $name}\@d-o { @include desktop-only { @content; } }
+	@at-root #{$sel + $name}\@d11-m { @include desktop-11-max { @content; } }
+	@at-root #{$sel + $name}\@d11-o { @include desktop-11-only { @content; } }
+	@at-root #{$sel + $name}\@td11-o { @include tablet-desktop-11-only { @content; } }
+	@at-root #{$sel + $name}\@d13 { @include desktop-13 { @content; } }
+	@at-root #{$sel + $name}\@d13-o { @include desktop-13-only { @content; } }
+	@at-root #{$sel + $name}\@w { @include widescreen { @content; } }
+}
+
+@mixin detect-ie {
+	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+		@content;
+	}
+}
+
+@mixin detect-edge {
+	@supports (-ms-ime-align: auto) {
+		@content;
+	}
+}
+
+@mixin detect-ie-edge {
+	@include detect-ie { @content; }
+	@include detect-edge { @content; }
+}
+
+@mixin detect-ios {
+	@supports (-webkit-overflow-scrolling: touch) {
+		@content;
+	}
+}
+
+@mixin detect-safari {
+	&:not(:root:root) {
+		@content;
+	}
+}
+
+@mixin detect-dark-theme {
+	@media (prefers-color-scheme: dark) {
+		@content;
+	}
+}

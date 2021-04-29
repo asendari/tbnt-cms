@@ -1,0 +1,345 @@
+/* --------------------------------------------------------------------------
+ * Background colors
+ */
+
+.bg-primary { background-color: $primary !important; }
+.bg-secondary { background-color: $secondary !important; }
+.bg-success { background-color: $success !important; }
+.bg-info { background-color: $info !important; }
+.bg-warning { background-color: $warning !important; }
+.bg-danger { background-color: $danger !important; }
+.bg-green { background-color: $green !important; }
+.bg-blue { background-color: $blue !important; }
+.bg-orange { background-color: $orange !important; }
+.bg-red { background-color: $red !important; }
+.bg-purple { background-color: $purple !important; }
+.bg-pink { background-color: $pink !important; }
+.bg-cyan { background-color: $cyan !important; }
+.bg-yellow { background-color: $yellow !important; }
+.bg-brown { background-color: $brown !important; }
+.bg-dark { background-color: $dark !important; }
+
+.bg-primary-extra { background-color: $primary-extra !important; }
+.bg-secondary-extra { background-color: $secondary-extra !important; }
+.bg-success-extra { background-color: $success-extra !important; }
+.bg-info-extra { background-color: $info-extra !important; }
+.bg-warning-extra { background-color: $warning-extra !important; }
+.bg-danger-extra { background-color: $danger-extra !important; }
+.bg-green-extra { background-color: $green-extra !important; }
+.bg-blue-extra { background-color: $blue-extra !important; }
+.bg-orange-extra { background-color: $orange-extra !important; }
+.bg-red-extra { background-color: $red-extra !important; }
+.bg-purple-extra { background-color: $purple-extra !important; }
+.bg-pink-extra { background-color: $pink-extra !important; }
+.bg-cyan-extra { background-color: $cyan-extra !important; }
+.bg-yellow-extra { background-color: $yellow-extra !important; }
+.bg-brown-extra { background-color: $brown-extra !important; }
+.bg-dark-extra { background-color: $dark-extra !important; }
+
+.bg-white { background-color: $white !important; }
+.bg-black { background-color: $black !important; }
+.bg-transparent { background-color: transparent !important; }
+
+.bg-overlay-white { background-color: $overlay-white !important; }
+.bg-overlay-black { background-color: $overlay-black !important; }
+
+.bg-muted { background-color: $gray !important; }
+.bg-muted-light { background-color: $gray-light !important; }
+.bg-muted-lighter { background-color: $gray-lighter !important; }
+.bg-muted-lightest { background-color: $gray-lightest !important; }
+
+
+
+/* --------------------------------------------------------------------------
+ * Border colors
+ */
+
+.border-primary { border-color: $primary !important; }
+.border-secondary { border-color: $secondary !important; }
+.border-success { border-color: $success !important; }
+.border-info { border-color: $info !important; }
+.border-warning { border-color: $warning !important; }
+.border-danger { border-color: $danger !important; }
+.border-green { border-color: $green !important; }
+.border-blue { border-color: $blue !important; }
+.border-orange { border-color: $orange !important; }
+.border-red { border-color: $red !important; }
+.border-purple { border-color: $purple !important; }
+.border-pink { border-color: $pink !important; }
+.border-cyan { border-color: $cyan !important; }
+.border-yellow { border-color: $yellow !important; }
+.border-brown { border-color: $brown !important; }
+.border-dark { border-color: $dark !important; }
+
+.border-white { border-color: $white !important; }
+.border-black { border-color: $black !important; }
+.border-transparent { border-color: transparent !important; }
+
+.border-overlay-white { border-color: $overlay-white !important; }
+.border-overlay-black { border-color: $overlay-black !important; }
+
+.border-muted { border-color: $gray !important; }
+.border-muted-light { border-color: $gray-light !important; }
+.border-muted-lighter { border-color: $gray-lighter !important; }
+.border-muted-lightest { border-color: $gray-lightest !important; }
+
+
+
+/* --------------------------------------------------------------------------
+ * Text colors
+ */
+
+.text-primary { color: $primary !important; }
+.text-secondary { color: $secondary !important; }
+.text-success { color: $success !important; }
+.text-info { color: $info !important; }
+.text-warning { color: $warning !important; }
+.text-danger { color: $danger !important; }
+.text-green { color: $green !important; }
+.text-blue { color: $blue !important; }
+.text-orange { color: $orange !important; }
+.text-red { color: $red !important; }
+.text-purple { color: $purple !important; }
+.text-pink { color: $pink !important; }
+.text-cyan { color: $cyan !important; }
+.text-yellow { color: $yellow !important; }
+.text-brown { color: $brown !important; }
+.text-dark { color: $dark !important; }
+
+.text-white { color: $white !important; }
+.text-black { color: $black !important; }
+.text-transparent { color: transparent !important; }
+
+.text-color { color: $text !important; }
+.text-title { color: $text-title !important; }
+.text-light { color: $text-light !important; }
+.text-disabled { color: $text-disabled !important; }
+
+.text-muted { color: $gray !important; }
+.text-muted-light { color: $gray-light !important; }
+.text-muted-lighter { color: $gray-lighter !important; }
+.text-muted-lightest { color: $gray-lightest !important; }
+
+.text-fade { opacity: .3 !important; }
+
+
+
+/* --------------------------------------------------------------------------
+ * Hover colors
+ */
+
+[class*="hover-"] { transition: .2s linear; }
+
+.hover-primary { &:hover { color: $primary !important; } }
+.hover-primary { &:hover { color: $primary !important; } }
+.hover-secondary { &:hover { color: $secondary !important; } }
+.hover-success { &:hover { color: $success !important; } }
+.hover-info { &:hover { color: $info !important; } }
+.hover-warning { &:hover { color: $warning !important; } }
+.hover-danger { &:hover { color: $danger !important; } }
+.hover-green { &:hover { color: $green !important; } }
+.hover-blue { &:hover { color: $blue !important; } }
+.hover-orange { &:hover { color: $orange !important; } }
+.hover-red { &:hover { color: $red !important; } }
+.hover-purple { &:hover { color: $purple !important; } }
+.hover-pink { &:hover { color: $pink !important; } }
+.hover-cyan { &:hover { color: $cyan !important; } }
+.hover-yellow { &:hover { color: $yellow !important; } }
+.hover-brown { &:hover { color: $brown !important; } }
+.hover-dark { &:hover { color: $dark !important; } }
+
+.hover-white { &:hover { color: $white !important; } }
+.hover-black { &:hover { color: $black !important; } }
+.hover-transparent { &:hover { color: transparent !important; } }
+
+.hover { &:hover { color: $text !important; } }
+.hover-title { &:hover { color: $text-title !important; } }
+.hover-light { &:hover { color: $text-light !important; } }
+.hover-disabled { &:hover { color: $text-disabled !important; } }
+
+.hover-muted { &:hover { color: $gray !important; } }
+.hover-muted-light { &:hover { color: $gray-light !important; } }
+.hover-muted-lighter { &:hover { color: $gray-lighter !important; } }
+.hover-muted-lightest { &:hover { color: $gray-lightest !important; } }
+
+.hover-fade { &:hover { opacity: .3 !important; } }
+
+/* --------------------------------------------------------------------------
+ * Hover background colors
+ */
+
+.hover-bg-primary { &:hover { background-color: $primary !important; } }
+.hover-bg-primary { &:hover { background-color: $primary !important; } }
+.hover-bg-secondary { &:hover { background-color: $secondary !important; } }
+.hover-bg-success { &:hover { background-color: $success !important; } }
+.hover-bg-info { &:hover { background-color: $info !important; } }
+.hover-bg-warning { &:hover { background-color: $warning !important; } }
+.hover-bg-danger { &:hover { background-color: $danger !important; } }
+.hover-bg-green { &:hover { background-color: $green !important; } }
+.hover-bg-blue { &:hover { background-color: $blue !important; } }
+.hover-bg-orange { &:hover { background-color: $orange !important; } }
+.hover-bg-red { &:hover { background-color: $red !important; } }
+.hover-bg-purple { &:hover { background-color: $purple !important; } }
+.hover-bg-pink { &:hover { background-color: $pink !important; } }
+.hover-bg-cyan { &:hover { background-color: $cyan !important; } }
+.hover-bg-yellow { &:hover { background-color: $yellow !important; } }
+.hover-bg-brown { &:hover { background-color: $brown !important; } }
+.hover-bg-dark { &:hover { background-color: $dark !important; } }
+
+.hover-bg-white { &:hover { background-color: $white !important; } }
+.hover-bg-black { &:hover { background-color: $black !important; } }
+.hover-bg-transparent { &:hover { background-color: transparent !important; } }
+
+.hover-bg-title { &:hover { background-color: $text-title !important; } }
+.hover-bg-light { &:hover { background-color: $text-light !important; } }
+.hover-bg-disabled { &:hover { background-color: $text-disabled !important; } }
+
+.hover-bg-muted { &:hover { background-color: $gray !important; } }
+.hover-bg-muted-light { &:hover { background-color: $gray-light !important; } }
+.hover-bg-muted-lighter { &:hover { background-color: $gray-lighter !important; } }
+.hover-bg-muted-lightest { &:hover { background-color: $gray-lightest !important; } }
+
+.hover-bg-fade { &:hover { background-opacity: 0.3 !important; } }
+
+/* --------------------------------------------------------------------------
+ * Hover border colors
+ */
+
+.hover-border-primary { &:hover { border-color: $primary !important; } }
+.hover-border-primary { &:hover { border-color: $primary !important; } }
+.hover-border-secondary { &:hover { border-color: $secondary !important; } }
+.hover-border-success { &:hover { border-color: $success !important; } }
+.hover-border-info { &:hover { border-color: $info !important; } }
+.hover-border-warning { &:hover { border-color: $warning !important; } }
+.hover-border-danger { &:hover { border-color: $danger !important; } }
+.hover-border-green { &:hover { border-color: $green !important; } }
+.hover-border-blue { &:hover { border-color: $blue !important; } }
+.hover-border-orange { &:hover { border-color: $orange !important; } }
+.hover-border-red { &:hover { border-color: $red !important; } }
+.hover-border-purple { &:hover { border-color: $purple !important; } }
+.hover-border-pink { &:hover { border-color: $pink !important; } }
+.hover-border-cyan { &:hover { border-color: $cyan !important; } }
+.hover-border-yellow { &:hover { border-color: $yellow !important; } }
+.hover-border-brown { &:hover { border-color: $brown !important; } }
+.hover-border-dark { &:hover { border-color: $dark !important; } }
+
+.hover-border-white { &:hover { border-color: $white !important; } }
+.hover-border-black { &:hover { border-color: $black !important; } }
+.hover-border-transparent { &:hover { border-color: transparent !important; } }
+
+.hover-border-title { &:hover { border-color: $text-title !important; } }
+.hover-border-light { &:hover { border-color: $text-light !important; } }
+.hover-border-disabled { &:hover { border-color: $text-disabled !important; } }
+
+.hover-border-muted { &:hover { border-color: $gray !important; } }
+.hover-border-muted-light { &:hover { border-color: $gray-light !important; } }
+.hover-border-muted-lighter { &:hover { border-color: $gray-lighter !important; } }
+.hover-border-muted-lightest { &:hover { border-color: $gray-lightest !important; } }
+
+.hover-border-fade { &:hover { border-opacity: 0.3 !important; } }
+
+.hover-border-shadow { &:hover { @include shadow; } }
+
+
+
+/* --------------------------------------------------------------------------
+ * Typography
+ */
+
+.family { @include family; }
+.truncate { @include truncate; }
+
+.light { font-weight: $font-weight-light; }
+.regular { font-weight: $font-weight-regular; }
+.bold { font-weight: $font-weight-bold; }
+.semibold { font-weight: $font-weight-semibold; }
+.extrabold { font-weight: $font-weight-extrabold; }
+
+.capitalize { text-transform: uppercase; }
+.no-line-break { white-space: nowrap; }
+
+
+
+/* --------------------------------------------------------------------------
+ * Margin
+ */
+
+.cancel-margin-top { &:last-child { margin-top: 0 !important; } }
+.cancel-margin-left { &:last-child { margin-left: 0 !important; } }
+.cancel-margin-right { &:last-child { margin-right: 0 !important; } }
+.cancel-margin-bottom { &:last-child { margin-bottom: 0 !important; } }
+
+
+
+/* --------------------------------------------------------------------------
+ * Padding
+ */
+
+.cancel-padding-top { &:last-child { padding-top: 0 !important; } }
+.cancel-padding-left { &:last-child { padding-left: 0 !important; } }
+.cancel-padding-right { &:last-child { padding-right: 0 !important; } }
+.cancel-padding-bottom { &:last-child { padding-bottom: 0 !important; } }
+
+
+
+/* --------------------------------------------------------------------------
+ * Positions
+ */
+
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed { position: fixed; }
+.z-index { z-index: 1; }
+
+
+
+/* --------------------------------------------------------------------------
+ * mixins
+ */
+
+.radius { @include has-radius; }
+
+
+
+/* --------------------------------------------------------------------------
+ * Border
+ */
+
+.border { @include has-border; }
+.border-none { border: none !important; }
+
+
+
+/* --------------------------------------------------------------------------
+ * Transition
+ */
+
+.transition { @include transition; }
+
+
+
+/* --------------------------------------------------------------------------
+ * Shadow
+ */
+
+.shadow { @include shadow; }
+
+
+
+/* --------------------------------------------------------------------------
+ * Misc
+ */
+
+.pointer-none { pointer-events: none; }
+.pointer-all { pointer-events: all !important; }
+.pointer { cursor: pointer; }
+.grab { cursor: grab; }
+
+
+
+/* --------------------------------------------------------------------------
+ * Animations
+ */
+
+.fade-in { opacity: .001; @include transition; &.active { opacity: 1 !important; } }
+.fade-out { opacity: 1; @include transition; &.active { opacity: .001 !important; } }

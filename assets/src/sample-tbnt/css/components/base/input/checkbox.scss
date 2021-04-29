@@ -1,0 +1,96 @@
+@import "~lib/css/components/base/input/checkbox.scss";
+
+.input--type-checkbox,
+.input--type-checkboxList {
+	.input--input {
+		padding: 0 !important;
+		border: none !important;
+		box-shadow: none !important;
+
+		.input-value {
+			&.input-value--checkbox {
+				display: flex;
+
+				.input-value--checkbox-input {
+					position: relative;
+					display: block;
+					width: 20px;
+					margin-right: 8px;
+
+					input {
+						position: relative;
+						z-index: 1;
+						display: inline-flex !important;
+						width: 0 !important;
+						height: 0 !important;
+						margin-left: -3px;
+						margin-right: 0;
+						opacity: .001;
+					}
+
+					&:before {
+						content: '';
+						position: absolute;
+						top: 2px; left: 0;
+						z-index: 0;
+						width: 20px;
+						height: 20px;
+						border: 1px solid $border;
+						border-radius: 4px;
+
+						@include shadow;
+					}
+
+					&:after {
+						content: '';
+						position: absolute;
+						top: 6px; left: 4px;
+						z-index: 0;
+						width: 12px;
+						height: 7px;
+						border-left: 1px solid $secondary;
+						border-bottom: 1px solid $secondary;
+						opacity: .001;
+						transform: rotate(-45deg) scale(.95);
+						transform-origin: center;
+
+						@include transition;
+					}
+				}
+
+				.input-value--checkbox-label {
+					flex: 1;
+
+					@include size-p-small;
+
+					.input-value--checkbox-label-default {
+						font-size: inherit;
+					}
+				}
+
+				&.--checked {
+					.input-value--checkbox-input {
+						&:after {
+							opacity: 1;
+							transform: rotate(-45deg) scale(1);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.--error {
+		.input--input {
+			.input-value {
+				&.input-value--checkbox {
+					.input-value--checkbox-input {
+						&:before {
+							border-color: $danger;
+						}
+					}
+				}
+			}
+		}
+	}
+}

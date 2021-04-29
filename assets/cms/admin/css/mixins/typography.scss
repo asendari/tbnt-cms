@@ -1,0 +1,71 @@
+@function family-px($px) {
+	@return $px + 1px;
+}
+
+@mixin strong() {
+	font-weight: $font-weight-semibold;
+}
+
+@mixin family() {
+	font-family: $font-family;
+}
+
+@mixin size-11-24() {
+	font-size: family-px(11px);
+	line-height: family-px(24px);
+}
+
+@mixin size-13-24() {
+	font-size: family-px(13px);
+	line-height: family-px(24px);
+}
+
+@mixin size-14-21() {
+	font-size: family-px(14px);
+	line-height: family-px(21px);
+}
+
+@mixin size-16-24() {
+	font-size: family-px(16px);
+	line-height: family-px(24px);
+}
+
+@mixin size-16-32() {
+	font-size: family-px(16px);
+	line-height: family-px(32px);
+}
+
+@mixin size-19-28() {
+	font-size: family-px(19px);
+	line-height: family-px(28px);
+}
+
+@mixin size-23-34() {
+	font-size: family-px(23px);
+	line-height: family-px(34px);
+}
+
+@mixin size-28-42() {
+	font-size: family-px(28px);
+	line-height: family-px(42px);
+}
+
+@mixin size-33-49() {
+	font-size: family-px(33px);
+	line-height: family-px(49px);
+}
+
+@mixin input() {
+	color: $text-title;
+
+	@include family;
+	@include size-13-24;
+}
+
+@mixin placeholder() {
+	color: $text !important;
+	opacity: .3 !important;
+	font-style: italic;
+
+	@include input;
+}

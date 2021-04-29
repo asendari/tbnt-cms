@@ -1,0 +1,32 @@
+/**
+ * @name padding
+ * @description Padding utils css for ReactJS personal library
+ * @file SCSS Padding utils
+ *
+ * @version 1.0.0 - 2019-11-28
+ * @author Alexandre Pilloud
+ */
+
+@include padding-gen;
+@include padding-gen('top');
+@include padding-gen('left');
+@include padding-gen('right');
+@include padding-gen('bottom');
+@include padding-gen('vertical');
+@include padding-gen('horizontal');
+
+@include all-devices('padding-none') { padding: 0 !important; }
+@include all-devices('padding-none-top') { padding-top: 0 !important; }
+@include all-devices('padding-none-left') { padding-left: 0 !important; }
+@include all-devices('padding-none-right') { padding-right: 0 !important; }
+@include all-devices('padding-none-bottom') { padding-bottom: 0 !important; }
+@include all-devices('padding-none-vertical') { padding-top: 0 !important; padding-bottom: 0 !important; }
+@include all-devices('padding-none-horizontal') { padding-left: 0 !important; padding-right: 0 !important; }
+
+@include all-devices('padding-cancel') { @include cancel-padding; }
+@include all-devices('padding-cancel-top') { @include cancel-padding-top; }
+@include all-devices('padding-cancel-left') { @include cancel-padding-left; }
+@include all-devices('padding-cancel-right') { @include cancel-padding-right; }
+@include all-devices('padding-cancel-bottom') { @include cancel-padding-bottom; }
+@include all-devices('padding-cancel-vertical') { @include cancel-padding-top; @include cancel-padding-bottom; }
+@include all-devices('padding-cancel-horizontal') { @include cancel-padding-left; @include cancel-padding-right; }

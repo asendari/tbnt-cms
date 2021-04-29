@@ -1,0 +1,43 @@
+.modal-full {
+	background-color: $overlay-white;
+
+	.modal--window {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		padding: 7vh 48px;
+
+		.modal-full--body {
+			padding: 32px 48px;
+		}
+
+		.modal-full--close {
+			position: absolute;
+			padding: 16px;
+			cursor: pointer;
+
+			&.--top-right {
+				top: 0; right: 0;
+			}
+
+			&.--top-left {
+				top: 0; left: 0;
+			}
+
+			&.--bottom-right {
+				bottom: 0; right: 0;
+			}
+
+			&.--bottom-left {
+				bottom: 0; left: 0;
+			}
+
+			svg {
+				width: 18px;
+				height: 18px;
+			}
+		}
+	}
+}

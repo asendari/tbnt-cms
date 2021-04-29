@@ -1,0 +1,64 @@
+/**
+ * @name content
+ * @description Content utils css for ReactJS personal library
+ * @file SCSS Content utils
+ *
+ * @version 1.0.0 - 2019-11-28
+ * @author Alexandre Pilloud
+ */
+
+@include all-devices('overflow') {
+	@include overflow;
+}
+
+@include all-devices('overflow-x') {
+	@include overflow-x;
+}
+
+@include all-devices('overflow-y') {
+	@include overflow-y;
+}
+
+@include all-devices('overflow-auto') {
+	@include overflow-auto;
+}
+
+@include all-devices('overflow-auto-x') {
+	@include overflow-auto-x;
+}
+
+@include all-devices('overflow-auto-y') {
+	@include overflow-auto-y;
+}
+
+@include all-devices('overflow-hidden') {
+	overflow: hidden !important;
+}
+
+@include all-devices('overflow-hidden-x') {
+	overflow-x: hidden !important;
+}
+
+@include all-devices('overflow-hidden-y') {
+	overflow-y: hidden !important;
+}
+
+@include all-devices('overflow-visible') {
+	overflow: visible !important;
+}
+
+@include all-devices('overflow-visible-x') {
+	overflow-x: visible !important;
+}
+
+@include all-devices('overflow-visible-y') {
+	overflow-y: visible !important;
+}
+
+@include all-devices('no-overlay') {
+	@include no-overlay;
+}
+
+@include all-devices('no-select') {
+	@include no-select;
+}

@@ -1,0 +1,12 @@
+.input--type-select {
+	.input--input {
+		padding: 8px 16px !important;
+
+		.input-value--select {
+			width: 100%;
+            font-weight: $font-weight-light;
+
+			@include input;
+		}
+	}
+}

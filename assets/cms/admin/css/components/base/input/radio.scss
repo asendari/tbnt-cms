@@ -1,0 +1,48 @@
+@import "~lib/css/components/base/input/radio.scss";
+
+.input--type-radio,
+.input--type-radioList {
+	.input--input {
+		.input-value {
+			&.input-value--radio {
+				position: relative;
+				display: block;
+				padding-left: 32px;
+				color: $text;
+
+				@include family;
+				@include size-13-24;
+
+				input {
+					position: relative;
+					z-index: 1;
+					display: inline-flex !important;
+					width: 0 !important;
+					height: 0 !important;
+					margin-left: -3px;
+					margin-right: 0;
+					opacity: .001;
+				}
+
+				&:before {
+					content: '';
+					position: absolute;
+					top: 4px; left: 0;
+					z-index: 0;
+					border: 1px solid $primary;
+					width: 16px;
+					height: 16px;
+					border-radius: 50%;
+
+					@include transition;
+				}
+
+				&.--checked {
+					&:before {
+						background-color: $primary;
+					}
+				}
+			}
+		}
+	}
+}

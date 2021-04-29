@@ -1,0 +1,160 @@
+@import "~lib/css/components/base/pagination.scss";
+
+.pagination {
+	.pagination--header {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 24px;
+
+		@include mobile {
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
+
+		.pagination--left {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			padding-left: 4px;
+
+			@include mobile {
+				order: 2;
+				padding-left: 20px;
+			}
+
+			.pagination--select {
+				display: inline-flex;
+				margin-right: 64px;
+
+				.select-all {
+					display: inline-flex;
+					justify-content: center;
+				}
+			}
+
+			.pagination--refresh {
+				display: inline-flex;
+				align-items: center;
+				cursor: pointer;
+				opacity: .5;
+
+				@include anim-hover;
+
+				.svg--refresh {
+					margin-top: -2px;
+					margin-right: 16px;
+				}
+			}
+		}
+
+		.pagination--right {
+			@include mobile {
+				order: 1;
+				display: inline-flex;
+				justify-content: flex-end;
+				flex-wrap: wrap;
+				margin-bottom: 32px;
+			}
+		}
+
+		.input--type-checkbox-list,
+		.input--type-radio-list {
+			& > * {
+				&:last-child {
+					margin-bottom: 25px;
+				}
+			}
+		}
+	}
+
+	.pagination--content {
+		display: block;
+		margin-bottom: 16px;
+
+		@include cancel-margin-bottom;
+
+		.pagination--item {
+			display: block;
+			margin-bottom: 16px;
+
+			@include cancel-margin-bottom;
+		}
+
+		.pagination--row {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			padding: 8px 20px;
+			background-color: white;
+			margin-bottom: 12px;
+
+			@include mobile {
+				padding: 16px;
+			}
+
+			.select {
+				display: inline-flex;
+				margin-right: 8px;
+
+				.select--item {
+					display: inline-flex;
+					justify-content: center;
+				}
+			}
+
+			.row {
+				flex: 1;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				padding: 16px 0px;
+
+				@include mobile {
+					display: block;
+				}
+
+				& > * {
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+				}
+
+				.img-container {
+					width: 70px;
+					height: 50px;
+
+					@include background-cover;
+				}
+
+				.icon-container {
+					width: 20px;
+					height: 20px;
+
+					@include background-contain;
+				}
+
+				.icons {
+					& > * {
+						margin-right: 16px;
+						cursor: pointer;
+
+						&:last-child {
+							margin-right: 0px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.pagination--no-data {
+		margin-top: 48px;
+	}
+
+	.pagination--footer {
+		margin-top: 80px;
+	}
+}

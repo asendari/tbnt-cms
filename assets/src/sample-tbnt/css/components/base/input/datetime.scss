@@ -1,0 +1,13 @@
+@import "~lib/css/components/base/input/datetime.scss";
+
+.input--type-datetime,
+.input--type-date,
+.input--type-time {
+	&.--read-only {
+		.input--input {
+			.input-value {
+				cursor: default;
+			}
+		}
+	}
+}

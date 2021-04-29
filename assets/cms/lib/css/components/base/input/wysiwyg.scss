@@ -1,0 +1,93 @@
+/**
+ * @name wysiwyg
+ * @description WYSIWYG base css for ReactJS personal library
+ * @file SCSS WYSIWYG Input Component
+ *
+ * @version 1.0.0 - 2019-11-28
+ * @author Alexandre Pilloud
+ */
+
+@import '~quill/dist/quill.core.css';
+@import '~quill/dist/quill.bubble.css';
+@import '~quill/dist/quill.snow.css';
+
+.input-value--wysiwyg {
+	.ql-toolbar {
+		.ql-formats {
+			button {
+				svg {
+
+				}
+
+				&.ql-active {
+
+				}
+			}
+		}
+	}
+
+	.ql-container {
+		.ql-editor {
+			max-height: 480px;
+			overflow: auto;
+
+			&.ql-blank {
+				&:before {
+
+				}
+			}
+		}
+
+		.ql-clipboard {
+
+		}
+
+		.ql-tooltip {
+			&.ql-flip {
+
+			}
+
+			&.ql-hidden {
+
+			}
+
+			&:before {
+
+			}
+
+			.ql-preview {
+
+			}
+
+			.ql-action {
+				&:after {
+
+				}
+			}
+
+			.ql-remove {
+				&:before {
+
+				}
+			}
+
+			a {
+
+			}
+
+			input {
+
+			}
+		}
+	}
+
+	.ql-snow {
+		&.ql-toolbar {
+
+		}
+
+		&.ql-container {
+
+		}
+	}
+}

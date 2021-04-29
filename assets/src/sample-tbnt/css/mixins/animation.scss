@@ -1,0 +1,12 @@
+@mixin anim-hover() {
+	@include transition();
+
+	&:hover,
+	&:focus {
+		opacity: .75;
+	}
+
+	&:active {
+		opacity: 1;
+	}
+}
